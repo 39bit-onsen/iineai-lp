@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">SNS投稿を「AI」で作ってみよう！</h3>
             <p className="mb-8 text-gray-400">まずはSNS投稿をAI生成で体験しよう！<br/>今までのSNS投稿作業が劇的に変わる！</p>
             
-            <a href="#demo" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-block text-xl">
+            <a href="#demo" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-12 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-block text-xl">
                無料デモ体験はこちら ▼
             </a>
             

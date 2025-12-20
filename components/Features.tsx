@@ -8,7 +8,7 @@ export const Features: React.FC = () => {
     <section id="features" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 border-l-8 border-orange-500 pl-4">
+          <h2 className="text-3xl font-bold text-gray-900 border-l-8 border-red-600 pl-4">
             「いいねAI」の主な機能について
           </h2>
         </div>
@@ -19,18 +19,18 @@ export const Features: React.FC = () => {
             return (
               <div key={f.id} className="bg-white rounded-xl shadow-md p-6 flex flex-col sm:flex-row gap-4 border border-gray-100 hover:shadow-lg transition-shadow print-break-inside-avoid">
                 <div className="flex-shrink-0">
-                  <div className="text-6xl font-black text-orange-100 leading-none">{f.id}</div>
+                  <div className="text-6xl font-black text-red-50 leading-none">{f.id}</div>
                 </div>
                 <div className="flex-grow">
                   {f.badge && (
                     <div className="flex items-center gap-2 mb-2">
-                      <span className={`text-[10px] px-2 py-0.5 rounded font-bold ${f.badge === '全プラン' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'}`}>
+                      <span className={`text-[10px] px-2 py-0.5 rounded font-bold ${f.badge === '全プラン' ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-600'}`}>
                         {f.badge}
                       </span>
                     </div>
                   )}
                   <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center gap-2">
-                    {IconComponent && <IconComponent className="text-orange-500" size={24} />}
+                    {IconComponent && <IconComponent className="text-red-600" size={24} />}
                     {f.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{f.description}</p>

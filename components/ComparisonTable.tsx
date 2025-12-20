@@ -11,7 +11,7 @@ export const ComparisonTable: React.FC = () => {
   ];
 
   const renderMark = (mark: string) => {
-    if (mark === '◎') return <span className="text-3xl font-bold text-orange-500">◎</span>;
+    if (mark === '◎') return <span className="text-3xl font-bold text-red-600">◎</span>;
     if (mark === '○') return <span className="text-2xl text-blue-400">○</span>;
     if (mark === '△') return <span className="text-2xl text-yellow-500">△</span>;
     if (mark === '×') return <span className="text-3xl text-red-400">×</span>;
@@ -19,9 +19,9 @@ export const ComparisonTable: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-orange-50 print-break-inside-avoid">
+    <section className="py-20 bg-red-50/30 print-break-inside-avoid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 border-l-8 border-orange-500 pl-4">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 border-l-8 border-red-600 pl-4">
           「いいねAI」の他社との比較
         </h2>
 
@@ -30,7 +30,7 @@ export const ComparisonTable: React.FC = () => {
             <thead>
               <tr className="bg-gray-800 text-white">
                 <th className="p-4 border-r border-gray-700 w-1/5">比較一覧</th>
-                <th className="p-4 border-r border-gray-700 bg-orange-600 w-1/5 text-xl">いいねAI</th>
+                <th className="p-4 border-r border-gray-700 bg-red-700 w-1/5 text-xl">いいねAI</th>
                 <th className="p-4 border-r border-gray-700 w-1/5">既存SNS運用代行</th>
                 <th className="p-4 border-r border-gray-700 w-1/5">フリーランス</th>
                 <th className="p-4 w-1/5">ChatGPT単体</th>
@@ -40,7 +40,7 @@ export const ComparisonTable: React.FC = () => {
               {rows.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-200 hover:bg-gray-50">
                   <td className="p-4 font-bold text-gray-700 border-r text-left bg-gray-50">{row.label}</td>
-                  <td className="p-4 font-bold border-r text-lg text-orange-600">{renderMark(row.iine)}</td>
+                  <td className="p-4 font-bold border-r text-lg text-red-700">{renderMark(row.iine)}</td>
                   <td className="p-4 border-r text-gray-600">{renderMark(row.agency)}</td>
                   <td className="p-4 border-r text-gray-600">{renderMark(row.freelance)}</td>
                   <td className="p-4 text-gray-600">{renderMark(row.chatgpt)}</td>

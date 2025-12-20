@@ -25,14 +25,14 @@ const App: React.FC = () => {
           </div>
           
           <nav className="hidden md:flex gap-6 text-sm font-bold text-gray-600">
-            <a href="#features" className="hover:text-orange-500 transition-colors">機能</a>
-            <a href="#plans" className="hover:text-orange-500 transition-colors">料金</a>
-            <a href="#demo" className="text-white bg-orange-500 px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">無料デモ</a>
+            <a href="#features" className="hover:text-red-500 transition-colors">機能</a>
+            <a href="#plans" className="hover:text-red-500 transition-colors">料金</a>
+            <a href="#demo" className="text-white bg-red-600 px-4 py-2 rounded-full hover:bg-red-700 transition-colors">無料デモ</a>
           </nav>
 
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-gray-600 hover:text-orange-500 focus:outline-none"
+            className="md:hidden p-2 text-gray-600 hover:text-red-500 focus:outline-none"
           >
             <Menu />
           </button>
@@ -44,7 +44,7 @@ const App: React.FC = () => {
             <nav className="flex flex-col p-4 space-y-4 text-center">
               <a href="#features" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 font-bold hover:bg-gray-50 rounded">機能</a>
               <a href="#plans" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 font-bold hover:bg-gray-50 rounded">料金</a>
-              <a href="#demo" onClick={() => setMobileMenuOpen(false)} className="block py-3 text-white bg-orange-500 font-bold rounded-full shadow-md">無料デモ体験</a>
+              <a href="#demo" onClick={() => setMobileMenuOpen(false)} className="block py-3 text-white bg-red-600 font-bold rounded-full shadow-md">無料デモ体験</a>
             </nav>
           </div>
         )}

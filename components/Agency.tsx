@@ -4,9 +4,9 @@ import { ChevronRight } from 'lucide-react';
 
 export const Agency: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-500 text-white print:bg-white print:text-black">
+    <section className="py-20 bg-gradient-to-r from-red-700 to-red-600 text-white print:bg-white print:text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8 border-l-8 border-white pl-4 print:border-orange-500">
+        <h2 className="text-3xl font-bold mb-8 border-l-8 border-white pl-4 print:border-red-600">
           販売代理店募集中
         </h2>
         
@@ -18,11 +18,11 @@ export const Agency: React.FC = () => {
             </p>
             
             <div className="bg-white/10 p-6 rounded-xl backdrop-blur-md border border-white/20 mb-6 print:border-gray-300 print:text-black">
-               <h3 className="text-xl font-bold mb-4 text-yellow-300 print:text-orange-500">★ 代理店特典</h3>
+               <h3 className="text-xl font-bold mb-4 text-yellow-300 print:text-red-600">★ 代理店特典</h3>
                <ul className="space-y-3">
                  {['ストック型の紹介料収益（毎月自動入金）', '2次代理店制度による報酬アップ', '自社利用も20%OFFで可能'].map((item, idx) => (
                    <li key={idx} className="flex items-center gap-2">
-                      <ChevronRight className="text-yellow-300 print:text-orange-500" size={18} />
+                      <ChevronRight className="text-yellow-300 print:text-red-600" size={18} />
                       <span>{item}</span>
                    </li>
                  ))}
@@ -37,14 +37,14 @@ export const Agency: React.FC = () => {
                     <div className="text-sm text-gray-500 mb-1">一次販売代理店（20%報酬）</div>
                     <div className="flex justify-between items-end">
                         <span className="font-bold">50件獲得/月</span>
-                        <span className="text-3xl font-black text-orange-600">¥1,000,000<span className="text-sm text-gray-500 font-normal">/月</span></span>
+                        <span className="text-3xl font-black text-red-700">¥1,000,000<span className="text-sm text-gray-500 font-normal">/月</span></span>
                     </div>
                 </div>
                  <div>
                     <div className="text-sm text-gray-500 mb-1">二次販売代理店（10%報酬）</div>
                     <div className="flex justify-between items-end">
                         <span className="font-bold">50件獲得/月</span>
-                        <span className="text-3xl font-black text-orange-600">¥500,000<span className="text-sm text-gray-500 font-normal">/月</span></span>
+                        <span className="text-3xl font-black text-red-700">¥500,000<span className="text-sm text-gray-500 font-normal">/月</span></span>
                     </div>
                 </div>
             </div>
