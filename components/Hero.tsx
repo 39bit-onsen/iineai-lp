@@ -1,90 +1,129 @@
-
 import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-white to-red-50 pt-24 pb-16 overflow-hidden">
-      <div className="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg no-print">
-        特許出願済
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
-        <div className="w-full md:w-1/2 text-center md:text-left z-10">
-          <h2 className="text-orange-500 font-bold tracking-widest text-lg sm:text-xl mb-2">
-            SNS運用 超効率化AIツール
-          </h2>
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-black text-orange-500 italic leading-none mb-6 tracking-tighter">
-            いいねAI
-          </h1>
-          <p className="text-gray-600 text-lg sm:text-xl font-medium mb-8 leading-relaxed">
-            AIでSNS運用を簡単・効率化する新時代ツールをご紹介いたします。
-          </p>
-
-          <div className="flex justify-center md:justify-start gap-4 mb-8">
-            {['IG', 'X', 'YT', 'Tk'].map((sns) => (
-              <div key={sns} className="w-12 h-12 bg-white shadow-md rounded-xl flex items-center justify-center text-2xl">
-                <span className={`font-bold ${sns === 'IG' ? 'text-pink-500' : sns === 'YT' ? 'text-red-600' : 'text-black'}`}>
-                  {sns}
-                </span>
-              </div>
-            ))}
-          </div>
+    <section className="relative hero-split-bg pt-20 pb-20 overflow-hidden min-h-[850px] flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          <div className="bg-red-600 text-white p-4 rounded-lg shadow-lg inline-block text-left max-w-md">
-            <div className="flex items-start">
-              <div className="bg-yellow-400 text-yellow-900 font-bold rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 border-4 border-yellow-200 mr-4 shadow-sm">
-                認定
-              </div>
-              <div>
-                <p className="font-bold text-lg">「いいねAI」は、</p>
-                <p className="text-sm opacity-90">Instagram / X(旧Twitter) / YouTube / TikTok の<br/>
-                <span className="font-bold text-yellow-300 underline decoration-2 underline-offset-2">公式認定を受けた安心のSNS運用ツール</span>です。</p>
-              </div>
+          {/* Left Column: Logo & Info */}
+          <div className="lg:col-span-5 text-center lg:text-left z-10 flex flex-col items-center lg:items-start space-y-8">
+            <div className="w-full">
+              {/* Replaced text h2 and h1 with the provided logo image */}
+              <img 
+                src="https://vsvqghnuhfvgylmshmka.supabase.co/storage/v1/object/public/images/iine_ai_logo_full.png" 
+                alt="いいねAI - SNS運用超効率化AIツール"
+                className="w-full max-w-lg mx-auto lg:mx-0 object-contain drop-shadow-md"
+              />
+            </div>
+
+            <p className="text-red-600 text-lg font-bold leading-relaxed max-w-sm">
+              AIでSNS運用を簡単・効率化する新時代ツールをご紹介いたします。
+            </p>
+
+            {/* horizontal badge (Longer) */}
+            <div className="bg-[#8cc63f] text-white py-1.5 w-full max-w-lg text-center font-bold text-xl rounded-sm shadow-md tracking-widest">
+              特許出願済
+            </div>
+
+            {/* Real Brand SNS icons between badge and button */}
+            <div className="flex justify-center lg:justify-start items-center gap-8 py-2">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" 
+                className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                alt="Instagram" 
+              />
+              <img 
+                src="https://abs.twimg.com/responsive-web/client-web/icon-ios.b1747a75.png" 
+                className="h-9 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                alt="X" 
+              />
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" 
+                className="h-8 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                alt="YouTube" 
+              />
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" 
+                className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                alt="TikTok" 
+              />
+            </div>
+
+            <div className="pt-4 no-print w-full flex justify-center lg:justify-start">
+              <a 
+                href="#demo" 
+                className="bg-red-600 hover:bg-red-700 text-white font-black py-5 px-14 rounded-full shadow-2xl transition-all inline-block text-2xl animate-subtle-pulse border-4 border-white"
+              >
+                 詳細資料ダウンロード
+              </a>
             </div>
           </div>
 
-          <div className="mt-8 no-print">
-            <a href="#demo" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transition-transform transform hover:scale-105 inline-block text-xl">
-               詳細資料ダウンロード
-            </a>
-          </div>
-        </div>
-
-        <div className="w-full md:w-1/2 mt-12 md:mt-0 relative flex justify-center print:hidden">
-            <div className="relative w-[300px] h-[600px] bg-black rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
+          {/* Middle Column: Device Mockup */}
+          <div className="lg:col-span-3 flex justify-center relative z-20">
+            <div className="relative w-[280px] h-[580px] bg-black rounded-[3rem] border-8 border-gray-900 shadow-2xl overflow-hidden transform rotate-2">
                 <div className="absolute top-0 w-full h-8 bg-black z-20 flex justify-center rounded-b-xl">
                    <div className="w-1/3 h-4 bg-gray-800 rounded-b-xl"></div>
                 </div>
                 <div className="w-full h-full bg-white pt-10 px-4 overflow-y-auto no-scrollbar">
                     <div className="flex items-center justify-between mb-4">
-                        <span className="font-bold text-orange-500">IineAI</span>
-                        <div className="w-8 h-8 rounded-full bg-gray-200"></div>
+                        <span className="font-bold text-orange-500 text-sm">投稿プレビュー</span>
+                        <div className="w-6 h-6 flex items-center justify-center bg-gray-100 rounded">
+                          <span className="text-xs">📥</span>
+                        </div>
                     </div>
                     <div className="bg-white border rounded-xl shadow-sm mb-4 p-4">
-                         <div className="w-full h-40 bg-red-50 rounded-lg mb-2 flex items-center justify-center">
-                            <h3 className="text-4xl font-black text-orange-500 italic">いいねAI</h3>
+                         <div className="w-full h-40 bg-gray-50 rounded-lg mb-2 flex items-center justify-center border border-gray-100">
+                            <h3 className="text-3xl font-black text-orange-500 italic">いいねAI</h3>
                          </div>
-                         <div className="space-y-2">
+                         <div className="space-y-2 mt-4">
                              <div className="flex space-x-2">
-                                <div className="w-6 h-6 rounded-full bg-red-100"></div>
-                                <div className="w-6 h-6 rounded-full bg-blue-100"></div>
-                                <div className="w-6 h-6 rounded-full bg-green-100"></div>
+                                <div className="w-5 h-5 rounded-full bg-red-100"></div>
+                                <div className="w-5 h-5 rounded-full bg-blue-100"></div>
+                                <div className="w-5 h-5 rounded-full bg-green-100"></div>
                              </div>
-                             <p className="text-xs font-bold">いいね！ 1,234件</p>
-                             <p className="text-xs text-gray-600">
-                                 <span className="font-bold text-black">iine_ai</span> 毎日の投稿作成に悩んでいませんか？いいねAIなら、圧倒的なSNS運用業務を全て自動化！
-                             </p>
-                             <div className="text-xs text-red-700 font-bold bg-red-50 p-2 rounded">
+                             <p className="text-[10px] font-bold">いいね！ 1,234件</p>
+                             <div className="text-[10px] text-gray-700 leading-tight">
+                                 <span className="font-bold">line_ai</span> 毎日の投稿作成に悩んでいませんか？<br/>いいねAIなら、面倒なSNS運用業務を全て自動化！
+                             </div>
+                             <div className="text-[10px] text-green-700 font-bold bg-green-50 p-2 rounded space-y-1">
                                 <p>✅ AI投稿作成</p>
                                 <p>✅ データ分析</p>
                                 <p>✅ タスク管理</p>
+                                <p>✅ 資料保管</p>
                              </div>
+                             <p className="text-[9px] text-gray-500">→最大93%の工数削減を実現！</p>
                          </div>
                     </div>
+                    {/* UI Buttons at bottom */}
+                    <div className="mt-4 border-t pt-4 flex justify-between gap-1">
+                      {['メニュー', '分析', '投稿一覧', 'タスク', '資料'].map((label, idx) => (
+                        <div key={idx} className="flex flex-col items-center">
+                          <div className={`w-8 h-8 rounded-lg ${idx === 2 ? 'bg-orange-500 text-white' : 'bg-gray-100'} flex items-center justify-center text-[10px]`}>
+                            {idx === 2 ? '✍️' : '📊'}
+                          </div>
+                          <span className="text-[8px] mt-1 text-gray-500">{label}</span>
+                        </div>
+                      ))}
+                    </div>
                 </div>
-                <div className="absolute bottom-20 -right-12 w-24 h-24 bg-red-200 opacity-50 rounded-full animate-ping"></div>
             </div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600 rounded-full opacity-5 filter blur-3xl -z-10"></div>
+            {/* Background glowing circle behind phone */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/20 rounded-full blur-3xl -z-10"></div>
+          </div>
+
+          {/* Right Column: Key Phrase */}
+          <div className="lg:col-span-4 flex flex-col justify-center z-10 text-white lg:text-black mt-12 lg:mt-0">
+            <div className="p-6 rounded-2xl backdrop-blur-sm lg:backdrop-blur-none">
+              <div className="space-y-4 text-3xl sm:text-4xl md:text-5xl font-black leading-tight drop-shadow-md lg:drop-shadow-none text-white lg:text-gray-900">
+                <p>SNS運用、</p>
+                <p>外注するほどでもない。</p>
+                <p>でも、内製は回らない。</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

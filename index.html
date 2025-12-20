@@ -29,6 +29,15 @@
           },
           fontFamily: {
             sans: ['"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', 'Meiryo', 'sans-serif'],
+          },
+          animation: {
+            'subtle-pulse': 'subtle-pulse 2s infinite',
+          },
+          keyframes: {
+            'subtle-pulse': {
+              '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(220, 38, 38, 0.7)' },
+              '50%': { transform: 'scale(1.05)', boxShadow: '0 0 20px 10px rgba(220, 38, 38, 0)' },
+            }
           }
         }
       }
@@ -46,6 +55,11 @@
     .no-scrollbar {
       -ms-overflow-style: none;
       scrollbar-width: none;
+    }
+
+    /* Diagonal split background */
+    .hero-split-bg {
+      background: linear-gradient(135deg, #fff 50%, #f97316 50.1%);
     }
 
     /* Print Optimization */
