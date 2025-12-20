@@ -9,9 +9,9 @@ export const Hero: React.FC = () => {
           {/* Left Column: Logo & Info */}
           <div className="lg:col-span-5 text-center lg:text-left z-10 flex flex-col items-center lg:items-start space-y-8">
             <div className="w-full">
-              {/* Replaced text h2 and h1 with the provided logo image */}
+              {/* Changed to local path in 'image' folder */}
               <img 
-                src="https://vsvqghnuhfvgylmshmka.supabase.co/storage/v1/object/public/images/iine_ai_logo_full.png" 
+                src="image/iine_ai_logo_full.png" 
                 alt="いいねAI - SNS運用超効率化AIツール"
                 className="w-full max-w-lg mx-auto lg:mx-0 object-contain drop-shadow-md"
               />
@@ -26,26 +26,26 @@ export const Hero: React.FC = () => {
               特許出願済
             </div>
 
-            {/* Real Brand SNS icons between badge and button */}
+            {/* Real Brand SNS icons from local 'image' folder */}
             <div className="flex justify-center lg:justify-start items-center gap-8 py-2">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" 
-                className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                src="image/instagram_logo.png" 
+                className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="Instagram" 
               />
               <img 
-                src="https://abs.twimg.com/responsive-web/client-web/icon-ios.b1747a75.png" 
-                className="h-9 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                src="image/x_logo.png" 
+                className="h-11 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="X" 
               />
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" 
-                className="h-8 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                src="image/youtube_logo.png" 
+                className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="YouTube" 
               />
               <img 
-                src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" 
-                className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                src="image/tiktok_logo.png" 
+                className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="TikTok" 
               />
             </div>
