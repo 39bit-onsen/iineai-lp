@@ -29,22 +29,22 @@ export const Hero: React.FC = () => {
             {/* Real Brand SNS icons from local 'image' folder */}
             <div className="flex justify-center lg:justify-start items-center gap-8 py-2">
               <img 
-                src="image/instagram_logo.png" 
+                src="image/instagram.png" 
                 className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="Instagram" 
               />
               <img 
-                src="image/x_logo.png" 
+                src="image/x.png" 
                 className="h-11 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="X" 
               />
               <img 
-                src="image/youtube_logo.png" 
+                src="image/youtube.png" 
                 className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="YouTube" 
               />
               <img 
-                src="image/tiktok_logo.png" 
+                src="image/tiktok.png" 
                 className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="TikTok" 
               />
