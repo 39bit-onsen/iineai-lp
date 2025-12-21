@@ -1,21 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Play, ExternalLink } from 'lucide-react';
 
 export const OfficialVideos: React.FC = () => {
+  // 再生中の動画インデックスを管理するステート
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+
   const videoItems = [
     {
       title: "【いいねAI】コンセプト・機能紹介ムービー",
       description: "AIがどのようにSNS運用を効率化するのか、実際の画面を交えて詳しく解説しています。",
-      thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200",
-      tag: "CONCEPT"
+      // YouTubeの動画IDから直接サムネイルを取得
+      thumbnail: "https://img.youtube.com/vi/4ooDakvthZo/maxresdefault.jpg",
+      tag: "CONCEPT",
+      embedId: "4ooDakvthZo?si=KR0dZ9FnYn-CDMwN"
     },
     {
-      title: "【実践編】AIによる自動投稿作成デモンストレーション",
-      description: "画像1枚から投稿文、ハッシュタグが生成される驚きのスピードを実感してください。",
-      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-      tag: "DEMO"
+      title: "【いいねAI】コンセプト・機能紹介ムービー2",
+      description: "AIがどのようにSNS運用を効率化するのか、実際の画面を交えて詳しく解説しています。",
+      thumbnail: "https://img.youtube.com/vi/4ooDakvthZo/maxresdefault.jpg",
+      tag: "DEMO",
+      embedId: "4ooDakvthZo?si=KR0dZ9FnYn-CDMwN"
     }
   ];
+
+  const handlePlay = (index: number) => {
+    setPlayingIndex(index);
+  };
 
   return (
     <section className="py-24 bg-[#f1f5f9] relative overflow-hidden border-t border-gray-200">
@@ -60,34 +70,47 @@ export const OfficialVideos: React.FC = () => {
                 </p>
               </div>
 
-              {/* Video Player Frame with Enhanced Styling */}
-              <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border-[6px] border-white bg-gray-900 group-hover:shadow-brand-600/20 group-hover:-translate-y-2 transition-all duration-700">
+              {/* Video Player Frame */}
+              <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border-[6px] border-white bg-gray-900 transition-all duration-700">
                 
-                {/* Visual Placeholder */}
-                <div className="absolute inset-0">
-                  <img 
-                    src={video.thumbnail} 
-                    alt={video.title} 
-                    className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
-                </div>
+                {playingIndex === idx ? (
+                  /* YouTube Embed Iframe */
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${video.embedId}&autoplay=1&controls=1`}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  /* Visual Placeholder Overlay */
+                  <>
+                    <div className="absolute inset-0">
+                      <img 
+                        src={video.thumbnail} 
+                        alt={video.title} 
+                        className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
+                    </div>
 
-                {/* Play Button Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer">
-                  <div className="w-24 h-24 md:w-32 md:h-32 bg-brand-600 text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-500 border-4 border-white/30 backdrop-blur-sm">
-                    <Play size={48} className="fill-current ml-2" />
-                  </div>
-                </div>
+                    {/* Play Button Overlay */}
+                    <div 
+                      className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+                      onClick={() => handlePlay(idx)}
+                    >
+                      <div className="w-24 h-24 md:w-32 md:h-32 bg-brand-600 text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-500 border-4 border-white/30 backdrop-blur-sm">
+                        <Play size={48} className="fill-current ml-2" />
+                      </div>
+                    </div>
+                  </>
+                )}
 
-                {/* Status Bar inside player */}
-                <div className="absolute top-8 left-8 z-20 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_#ef4444]"></div>
-                  <span className="text-white text-[10px] font-black uppercase tracking-[0.3em] opacity-80">Now Available</span>
-                </div>
-
-                {/* Bottom Reflection Overlay */}
-                <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                {/* Bottom Reflection Overlay (Only shown when not playing) */}
+                {playingIndex !== idx && (
+                  <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+                )}
               </div>
               
               {/* Decorative Separator */}
