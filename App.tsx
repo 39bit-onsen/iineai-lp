@@ -8,6 +8,7 @@ import { ImpactStatsSimple } from './components/ImpactStatsSimple';
 import { ProblemSolution } from './components/ProblemSolution';
 import { TechStack } from './components/TechStack';
 import { AutomationGuide } from './components/AutomationGuide';
+import { EmotionalAppeal } from './components/EmotionalAppeal';
 import { Features } from './components/Features';
 import { ComparisonTable } from './components/ComparisonTable';
 import { PlanList } from './components/PlanList';
@@ -28,6 +29,7 @@ const App: React.FC = () => {
         <ProblemSolution />
         <TechStack />
         <AutomationGuide />
+        <EmotionalAppeal />
         <Features />
         <ComparisonTable />
         <PlanList />
