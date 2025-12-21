@@ -7,6 +7,7 @@ import { ImpactStats } from './components/ImpactStats';
 import { ImpactStatsSimple } from './components/ImpactStatsSimple';
 import { ProblemSolution } from './components/ProblemSolution';
 import { TechStack } from './components/TechStack';
+import { AutomationGuide } from './components/AutomationGuide';
 import { Features } from './components/Features';
 import { ComparisonTable } from './components/ComparisonTable';
 import { PlanList } from './components/PlanList';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <ImpactStatsSimple />
         <ProblemSolution />
         <TechStack />
+        <AutomationGuide />
         <Features />
         <ComparisonTable />
         <PlanList />

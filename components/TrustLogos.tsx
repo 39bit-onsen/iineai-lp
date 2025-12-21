@@ -14,10 +14,10 @@ export const TrustLogos: React.FC = () => {
         <div className="flex justify-center items-center">
           {/* 
             企業のロゴは一枚のpng（透過画像）として表示。
-            現在はプレースホルダー画像ですが、実際のURLに差し替え可能です。
+            最新のURL: trust_logos.png に差し替え。
           */}
           <img 
-            src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/trust_logos_all.png" 
+            src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/trust_logos.png" 
             alt="導入企業一覧" 
             className="max-w-full h-auto object-contain opacity-90 transition-opacity hover:opacity-100"
             onError={(e) => {
