@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { Hero } from './components/Hero';
+import { VideoSection } from './components/VideoSection';
+import { TrustLogos } from './components/TrustLogos';
 import { ImpactStats } from './components/ImpactStats';
 import { ProblemSolution } from './components/ProblemSolution';
 import { TechStack } from './components/TechStack';
@@ -16,6 +17,8 @@ const App: React.FC = () => {
     <div className="bg-white text-gray-800 font-sans antialiased">
       <main>
         <Hero />
+        <VideoSection />
+        <TrustLogos />
         <ImpactStats />
         <ProblemSolution />
         <TechStack />

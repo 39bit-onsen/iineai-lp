@@ -9,9 +9,9 @@ export const Hero: React.FC = () => {
           {/* Left Column: Logo & Info */}
           <div className="lg:col-span-5 text-center lg:text-left z-10 flex flex-col items-center lg:items-start space-y-8">
             <div className="w-full">
-              {/* Updated folder path to 'assets' */}
+              {/* Updated to provided CDN URL for preview support */}
               <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/iine_ai_logo_full.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/logotype_japanese.png" 
                 alt="いいねAI - SNS運用超効率化AIツール"
                 className="w-full max-w-lg mx-auto lg:mx-0 object-contain drop-shadow-md"
               />
@@ -26,31 +26,31 @@ export const Hero: React.FC = () => {
               特許出願済
             </div>
 
-            {/* Real Brand SNS icons from local 'assets' folder */}
-            <div className="flex justify-center lg:justify-start items-center gap-8 py-2">
+            {/* Real Brand SNS icons - Now centered relative to the badge above */}
+            <div className="flex justify-center items-center gap-8 py-2 w-full max-w-lg">
               <img 
-                src="assets/instagram.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/instagram.png" 
                 className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="Instagram" 
               />
               <img 
-                src="assets/x.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/x.png" 
                 className="h-11 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="X" 
               />
               <img 
-                src="assets/youtube.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/youtube.png" 
                 className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="YouTube" 
               />
               <img 
-                src="assets/tiktok.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/tiktok.png" 
                 className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="TikTok" 
               />
             </div>
 
-            <div className="pt-4 no-print w-full flex justify-center lg:justify-start">
+            <div className="pt-4 no-print w-full max-w-lg flex justify-center">
               <a 
                 href="#demo" 
                 className="bg-brand-600 hover:bg-brand-700 text-white font-black py-5 px-14 rounded-full shadow-2xl transition-all inline-block text-2xl animate-subtle-pulse border-4 border-white"
@@ -119,7 +119,8 @@ export const Hero: React.FC = () => {
               <div className="space-y-4 text-3xl sm:text-4xl md:text-5xl font-black leading-tight drop-shadow-md lg:drop-shadow-none text-white lg:text-gray-900">
                 <p>SNS運用、</p>
                 <p>外注するほどでもない。</p>
-                <p>でも、内製は回らない。</p>
+                <p>切実な現場を</p>
+                <p>AIが救います。</p>
               </div>
             </div>
           </div>
