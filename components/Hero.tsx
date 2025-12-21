@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
             <div className="w-full">
               {/* Updated folder path to 'assets' */}
               <img 
-                src="assets/iine_ai_logo_full.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/iine_ai_logo_full.png" 
                 alt="いいねAI - SNS運用超効率化AIツール"
                 className="w-full max-w-lg mx-auto lg:mx-0 object-contain drop-shadow-md"
               />
