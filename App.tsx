@@ -14,6 +14,9 @@ import { Features } from './components/Features';
 import { ComparisonTable } from './components/ComparisonTable';
 import { PlanList } from './components/PlanList';
 import { Agency } from './components/Agency';
+import { ContactCTA } from './components/ContactCTA';
+import { UserInterview } from './components/UserInterview';
+import { OfficialVideos } from './components/OfficialVideos';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 
@@ -36,7 +39,11 @@ const App: React.FC = () => {
         <ComparisonTable />
         <PlanList />
         <Agency />
-        <FAQ />
+        <ContactCTA />
+        <UserInterview />
+        <OfficialVideos />
+        {/* FAQセクション：打合せの結果次第で表示を切り替えるため一時的にコメントアウト */}
+        {/* <FAQ /> */}
       </main>
 
       <Footer />
