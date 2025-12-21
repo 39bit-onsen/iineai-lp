@@ -9,15 +9,15 @@ export const Hero: React.FC = () => {
           {/* Left Column: Logo & Info */}
           <div className="lg:col-span-5 text-center lg:text-left z-10 flex flex-col items-center lg:items-start space-y-8">
             <div className="w-full">
-              {/* Changed to local path in 'image' folder */}
+              {/* Updated folder path to 'assets' */}
               <img 
-                src="image/iine_ai_logo_full.png" 
+                src="assets/iine_ai_logo_full.png" 
                 alt="いいねAI - SNS運用超効率化AIツール"
                 className="w-full max-w-lg mx-auto lg:mx-0 object-contain drop-shadow-md"
               />
             </div>
 
-            <p className="text-red-600 text-lg font-bold leading-relaxed max-w-sm">
+            <p className="text-brand-600 text-lg font-bold leading-relaxed max-w-sm">
               AIでSNS運用を簡単・効率化する新時代ツールをご紹介いたします。
             </p>
 
@@ -26,25 +26,25 @@ export const Hero: React.FC = () => {
               特許出願済
             </div>
 
-            {/* Real Brand SNS icons from local 'image' folder */}
+            {/* Real Brand SNS icons from local 'assets' folder */}
             <div className="flex justify-center lg:justify-start items-center gap-8 py-2">
               <img 
-                src="image/instagram.png" 
+                src="assets/instagram.png" 
                 className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="Instagram" 
               />
               <img 
-                src="image/x.png" 
+                src="assets/x.png" 
                 className="h-11 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="X" 
               />
               <img 
-                src="image/youtube.png" 
+                src="assets/youtube.png" 
                 className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="YouTube" 
               />
               <img 
-                src="image/tiktok.png" 
+                src="assets/tiktok.png" 
                 className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="TikTok" 
               />
@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
             <div className="pt-4 no-print w-full flex justify-center lg:justify-start">
               <a 
                 href="#demo" 
-                className="bg-red-600 hover:bg-red-700 text-white font-black py-5 px-14 rounded-full shadow-2xl transition-all inline-block text-2xl animate-subtle-pulse border-4 border-white"
+                className="bg-brand-600 hover:bg-brand-700 text-white font-black py-5 px-14 rounded-full shadow-2xl transition-all inline-block text-2xl animate-subtle-pulse border-4 border-white"
               >
                  詳細資料ダウンロード
               </a>
@@ -79,7 +79,7 @@ export const Hero: React.FC = () => {
                          </div>
                          <div className="space-y-2 mt-4">
                              <div className="flex space-x-2">
-                                <div className="w-5 h-5 rounded-full bg-red-100"></div>
+                                <div className="w-5 h-5 rounded-full bg-brand-100"></div>
                                 <div className="w-5 h-5 rounded-full bg-blue-100"></div>
                                 <div className="w-5 h-5 rounded-full bg-green-100"></div>
                              </div>
