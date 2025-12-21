@@ -63,50 +63,15 @@ export const Hero: React.FC = () => {
           {/* Middle Column: Device Mockup */}
           <div className="lg:col-span-3 flex justify-center relative z-20">
             <div className="relative w-[280px] h-[580px] bg-black rounded-[3rem] border-8 border-gray-900 shadow-2xl overflow-hidden transform rotate-2">
-                <div className="absolute top-0 w-full h-8 bg-black z-20 flex justify-center rounded-b-xl">
+                <div className="absolute top-0 w-full h-8 bg-black z-30 flex justify-center rounded-b-xl">
                    <div className="w-1/3 h-4 bg-gray-800 rounded-b-xl"></div>
                 </div>
-                <div className="w-full h-full bg-white pt-10 px-4 overflow-y-auto no-scrollbar">
-                    <div className="flex items-center justify-between mb-4">
-                        <span className="font-bold text-orange-500 text-sm">投稿プレビュー</span>
-                        <div className="w-6 h-6 flex items-center justify-center bg-gray-100 rounded">
-                          <span className="text-xs">📥</span>
-                        </div>
-                    </div>
-                    <div className="bg-white border rounded-xl shadow-sm mb-4 p-4">
-                         <div className="w-full h-40 bg-gray-50 rounded-lg mb-2 flex items-center justify-center border border-gray-100">
-                            <h3 className="text-3xl font-black text-orange-500 italic">いいねAI</h3>
-                         </div>
-                         <div className="space-y-2 mt-4">
-                             <div className="flex space-x-2">
-                                <div className="w-5 h-5 rounded-full bg-brand-100"></div>
-                                <div className="w-5 h-5 rounded-full bg-blue-100"></div>
-                                <div className="w-5 h-5 rounded-full bg-green-100"></div>
-                             </div>
-                             <p className="text-[10px] font-bold">いいね！ 1,234件</p>
-                             <div className="text-[10px] text-gray-700 leading-tight">
-                                 <span className="font-bold">line_ai</span> 毎日の投稿作成に悩んでいませんか？<br/>いいねAIなら、面倒なSNS運用業務を全て自動化！
-                             </div>
-                             <div className="text-[10px] text-green-700 font-bold bg-green-50 p-2 rounded space-y-1">
-                                <p>✅ AI投稿作成</p>
-                                <p>✅ データ分析</p>
-                                <p>✅ タスク管理</p>
-                                <p>✅ 資料保管</p>
-                             </div>
-                             <p className="text-[9px] text-gray-500">→最大93%の工数削減を実現！</p>
-                         </div>
-                    </div>
-                    {/* UI Buttons at bottom */}
-                    <div className="mt-4 border-t pt-4 flex justify-between gap-1">
-                      {['メニュー', '分析', '投稿一覧', 'タスク', '資料'].map((label, idx) => (
-                        <div key={idx} className="flex flex-col items-center">
-                          <div className={`w-8 h-8 rounded-lg ${idx === 2 ? 'bg-orange-500 text-white' : 'bg-gray-100'} flex items-center justify-center text-[10px]`}>
-                            {idx === 2 ? '✍️' : '📊'}
-                          </div>
-                          <span className="text-[8px] mt-1 text-gray-500">{label}</span>
-                        </div>
-                      ))}
-                    </div>
+                <div className="w-full h-full bg-white flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/topphone.png" 
+                      alt="いいねAI アプリ画面デモ"
+                      className="w-full h-full object-contain"
+                    />
                 </div>
             </div>
             {/* Background glowing circle behind phone */}

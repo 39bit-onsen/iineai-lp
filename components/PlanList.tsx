@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 import { PLANS } from '../constants';
@@ -94,20 +93,29 @@ export const PlanList: React.FC = () => {
         <div className="mt-16 bg-gray-50 p-8 rounded-xl border border-gray-200 print-break-inside-avoid">
             <h3 className="text-2xl font-bold text-center mb-8">「One」プランの違いについて</h3>
             <div className="grid md:grid-cols-2 gap-12">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <div className="bg-red-50 text-red-800 font-bold px-4 py-1 inline-block rounded mb-4">通常プラン（ベーシックなど）</div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div className="bg-red-50 text-red-800 font-bold px-4 py-1 inline-block rounded mb-4 text-sm">通常プラン（ベーシックなど）</div>
                     <h4 className="text-xl font-bold mb-4 text-red-700">最大4つのSNSを利用可能</h4>
-                    <p className="text-gray-600 text-sm mb-4">Instagram, X, YouTube, TikTokすべての媒体を1つのプロジェクトで管理できます。</p>
-                    <div className="flex justify-center gap-4 text-2xl font-bold text-gray-400">
-                        <span className="text-pink-500">IG</span> & <span className="text-black">X</span> & <span className="text-red-600">YT</span> & <span className="text-black">Tk</span>
+                    <p className="text-gray-600 text-sm mb-6 leading-relaxed">Instagram, X, YouTube, TikTokすべての媒体を1つのプロジェクトで管理できます。媒体ごとに最適化された投稿をAIが同時に作成します。</p>
+                    <div className="flex justify-center items-center gap-3">
+                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/instagram.png" className="h-8 w-auto" alt="Instagram" />
+                        <span className="text-gray-300 font-bold">&</span>
+                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/x.png" className="h-7 w-auto" alt="X" />
+                        <span className="text-gray-300 font-bold">&</span>
+                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/youtube.png" className="h-6 w-auto" alt="YouTube" />
+                        <span className="text-gray-300 font-bold">&</span>
+                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/tiktok.png" className="h-8 w-auto" alt="TikTok" />
                     </div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                     <div className="bg-gray-200 text-gray-800 font-bold px-4 py-1 inline-block rounded mb-4">Oneプラン</div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div className="bg-gray-100 text-gray-800 font-bold px-4 py-1 inline-block rounded mb-4 text-sm">Oneプラン</div>
                     <h4 className="text-xl font-bold mb-4 text-red-700">1つのSNSだけ選んで利用</h4>
-                    <p className="text-gray-600 text-sm mb-4">特定のSNSに特化したい場合にお得なプランです。店舗ごとにアカウントが分かれている場合などに最適です。</p>
-                    <div className="flex justify-center gap-4 text-2xl font-bold text-gray-400">
-                         <span className="text-pink-500">IG</span> or <span className="text-black">X</span> or ...
+                    <p className="text-gray-600 text-sm mb-6 leading-relaxed">特定のSNSに特化したい場合にお得なプランです。店舗ごとにアカウントが分かれている場合などに最適なコストパフォーマンスを発揮します。</p>
+                    <div className="flex justify-center items-center gap-3">
+                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/instagram.png" className="h-8 w-auto" alt="Instagram" />
+                        <span className="text-gray-400 font-medium text-sm">or</span>
+                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/x.png" className="h-7 w-auto" alt="X" />
+                        <span className="text-gray-400 font-medium text-sm">or ...</span>
                     </div>
                 </div>
             </div>

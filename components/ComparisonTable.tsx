@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const ComparisonTable: React.FC = () => {
@@ -10,11 +9,21 @@ export const ComparisonTable: React.FC = () => {
     { label: '運用の内製化', iine: '◎', agency: '×', freelance: '×', chatgpt: '◎' },
   ];
 
-  const renderMark = (mark: string) => {
-    if (mark === '◎') return <span className="text-3xl font-bold text-red-600">◎</span>;
-    if (mark === '○') return <span className="text-2xl text-blue-400">○</span>;
-    if (mark === '△') return <span className="text-2xl text-yellow-500">△</span>;
-    if (mark === '×') return <span className="text-3xl text-red-400">×</span>;
+  const renderMark = (mark: string, isIine: boolean) => {
+    if (mark === '◎') {
+      // いいねAIは赤、それ以外はオレンジ
+      return <span className={`text-4xl font-black ${isIine ? 'text-red-600' : 'text-orange-500'}`}>◎</span>;
+    }
+    if (mark === '○') {
+      // 青色にし、さらにサイズを大きく調整（text-5xl）
+      return <span className="text-5xl font-black text-blue-500">○</span>;
+    }
+    if (mark === '△') {
+      return <span className="text-3xl font-black text-blue-500">△</span>;
+    }
+    if (mark === '×') {
+      return <span className="text-4xl font-black text-blue-500">×</span>;
+    }
     return mark;
   };
 
@@ -39,11 +48,11 @@ export const ComparisonTable: React.FC = () => {
             <tbody>
               {rows.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="p-4 font-bold text-gray-700 border-r text-left bg-gray-50">{row.label}</td>
-                  <td className="p-4 font-bold border-r text-lg text-red-700">{renderMark(row.iine)}</td>
-                  <td className="p-4 border-r text-gray-600">{renderMark(row.agency)}</td>
-                  <td className="p-4 border-r text-gray-600">{renderMark(row.freelance)}</td>
-                  <td className="p-4 text-gray-600">{renderMark(row.chatgpt)}</td>
+                  <td className="p-6 font-bold text-gray-700 border-r text-left bg-gray-50">{row.label}</td>
+                  <td className="p-4 font-bold border-r text-lg text-red-700 leading-none">{renderMark(row.iine, true)}</td>
+                  <td className="p-4 border-r text-gray-600 leading-none">{renderMark(row.agency, false)}</td>
+                  <td className="p-4 border-r text-gray-600 leading-none">{renderMark(row.freelance, false)}</td>
+                  <td className="p-4 text-gray-600 leading-none">{renderMark(row.chatgpt, false)}</td>
                 </tr>
               ))}
             </tbody>

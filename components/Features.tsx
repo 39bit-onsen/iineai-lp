@@ -1,4 +1,3 @@
-
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
 import { FEATURES } from '../constants';
@@ -24,7 +23,7 @@ export const Features: React.FC = () => {
                 <div className="flex-grow">
                   {f.badge && (
                     <div className="flex items-center gap-2 mb-2">
-                      <span className={`text-[10px] px-2 py-0.5 rounded font-bold ${f.badge === '全プラン' ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-600'}`}>
+                      <span className={`text-[10px] px-2 py-0.5 rounded font-bold ${f.badge === '全プラン' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'}`}>
                         {f.badge}
                       </span>
                     </div>
