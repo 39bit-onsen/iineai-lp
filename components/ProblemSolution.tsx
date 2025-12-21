@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 
@@ -25,7 +24,10 @@ export const ProblemSolution: React.FC = () => {
               <span className="text-gray-600">運用代行費用（月額 20 万円～）</span>
               <ArrowRight className="mx-4 text-red-600 hidden md:block" />
               <ChevronDown className="my-2 text-red-600 md:hidden" />
-              <span className="font-bold text-red-700 text-xl">（導入後：月額1万円～）</span>
+              <div className="flex flex-col">
+                <span className="font-bold text-red-700 text-xl">導入後：月額1万円～</span>
+                <span className="text-xs text-red-500 font-bold">（1日わずか300円〜 ／ ペットボトル約2本分）</span>
+              </div>
             </div>
 
             <div className="flex flex-col md:flex-row items-start md:items-center bg-gray-50 p-4 rounded-lg border-l-4 border-gray-400">
@@ -50,17 +52,24 @@ export const ProblemSolution: React.FC = () => {
           </p>
 
           <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8 relative z-10 print:hidden">
-             <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <p className="text-sm">月額20万円〜</p>
+             <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
+                <p className="text-sm opacity-80">外注コスト 月額20万円〜</p>
                 <div className="text-4xl font-bold my-2">↓</div>
-                <p className="text-5xl font-bold text-yellow-300">月額1万円〜</p>
+                <div className="flex flex-col items-center">
+                  <p className="text-5xl font-black text-yellow-300">1日300円〜</p>
+                  <p className="text-sm font-bold text-white mt-1">（月額1万円〜）</p>
+                </div>
              </div>
-             <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <p className="text-sm">従来より</p>
-                <p className="text-6xl font-black text-yellow-300">95<span className="text-3xl">%</span></p>
+             <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
+                <p className="text-sm opacity-80">運用工数を</p>
+                <p className="text-6xl font-black text-yellow-300">93<span className="text-3xl">%</span></p>
                 <p className="text-xl font-bold">削減</p>
              </div>
           </div>
+          
+          <p className="mt-8 text-sm text-red-100 font-bold relative z-10 opacity-80">
+            ※月額費用を30日で換算。少額の投資で、プロ級のSNS運用体制を社内に構築できます。
+          </p>
         </div>
       </div>
     </section>

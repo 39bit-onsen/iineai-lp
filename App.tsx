@@ -2,7 +2,9 @@ import React from 'react';
 import { Hero } from './components/Hero';
 import { VideoSection } from './components/VideoSection';
 import { TrustLogos } from './components/TrustLogos';
+import { CertificationSection } from './components/CertificationSection';
 import { ImpactStats } from './components/ImpactStats';
+import { ImpactStatsSimple } from './components/ImpactStatsSimple';
 import { ProblemSolution } from './components/ProblemSolution';
 import { TechStack } from './components/TechStack';
 import { Features } from './components/Features';
@@ -19,7 +21,9 @@ const App: React.FC = () => {
         <Hero />
         <VideoSection />
         <TrustLogos />
+        <CertificationSection />
         <ImpactStats />
+        <ImpactStatsSimple />
         <ProblemSolution />
         <TechStack />
         <Features />
