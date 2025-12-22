@@ -48,7 +48,7 @@ export const OfficialVideos: React.FC = () => {
                   <span className="bg-gray-800 text-white text-[10px] font-black px-2 py-0.5 rounded tracking-widest">{video.tag}</span>
                 </div>
                 <h3 className="text-2xl md:text-4xl font-black text-gray-800 mb-4 group-hover:text-brand-600 transition-colors duration-300 tracking-tight">{video.title}</h3>
-                <p className="text-base md:text-xl text-gray-500 font-bold max-w-3xl mx-auto leading-relaxed">{video.description}</p>
+                <p className="text-base md:text-xl text-gray-500 font-bold max-w-3xl mx-auto leading-relaxed md:whitespace-nowrap">{video.description}</p>
               </div>
 
               <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white bg-gray-900">

@@ -82,10 +82,10 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-4 flex flex-col justify-center z-10 text-white lg:text-black mt-12 lg:mt-0">
             <div className="p-6 rounded-2xl backdrop-blur-sm lg:backdrop-blur-none">
               <div className="space-y-4 text-3xl sm:text-4xl md:text-5xl font-black leading-tight drop-shadow-md lg:drop-shadow-none text-white lg:text-gray-900">
-                <p>SNS運用、</p>
-                <p>外注するほどでもない。</p>
-                <p>切実な現場を</p>
-                <p>AIが救います。</p>
+                <p className="whitespace-nowrap">SNS運用、</p>
+                <p className="whitespace-nowrap">外注するほどでもない。</p>
+                <p className="whitespace-nowrap">切実な現場を</p>
+                <p className="whitespace-nowrap">AIが救います。</p>
               </div>
             </div>
           </div>
