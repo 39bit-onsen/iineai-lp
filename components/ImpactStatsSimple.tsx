@@ -31,13 +31,13 @@ export const ImpactStatsSimple: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#f8fafc]">
+    <section className="py-24 bg-orange-50 border-t border-orange-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header with Dark Box and Orange Line */}
         <div className="relative mb-12">
           <div className="absolute bottom-0 left-0 w-full h-1 bg-[#f97316]"></div>
-          <div className="relative inline-block bg-[#111827] text-white py-2 px-8 rounded-t-lg font-bold text-lg md:text-xl tracking-wider">
+          <div className="relative inline-block bg-white text-gray-900 py-2 px-8 rounded-t-lg font-bold text-lg md:text-xl tracking-wider border-x border-t border-orange-100">
             数値で見るいいねAIの導入効果
           </div>
         </div>
@@ -45,14 +45,14 @@ export const ImpactStatsSimple: React.FC = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {stats.map((s, i) => (
-            <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
+            <div key={i} className="bg-white p-8 rounded-2xl shadow-lg border border-orange-100 flex flex-col items-center text-center">
               {/* Icon */}
-              <div className="w-12 h-12 rounded-full bg-[#ef4444] flex items-center justify-center text-white mb-6">
+              <div className="w-12 h-12 rounded-full bg-brand-600 flex items-center justify-center text-white mb-6 shadow-md">
                 <s.icon size={24} />
               </div>
               
               {/* Label */}
-              <h3 className="text-sm md:text-base font-bold text-gray-600 mb-4">{s.label}</h3>
+              <h3 className="text-sm md:text-base font-bold text-gray-500 mb-4">{s.label}</h3>
               
               {/* Value */}
               <div className="mb-6 flex flex-col items-center">
@@ -65,7 +65,7 @@ export const ImpactStatsSimple: React.FC = () => {
               </div>
               
               {/* Description */}
-              <p className="text-sm text-gray-500 leading-relaxed font-medium">
+              <p className="text-sm text-gray-600 leading-relaxed font-bold">
                 {s.desc}
               </p>
             </div>

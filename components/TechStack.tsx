@@ -2,7 +2,7 @@ import React from 'react';
 
 export const TechStack: React.FC = () => {
   return (
-    <section className="py-16 bg-white border-t border-gray-100">
+    <section className="py-20 bg-gray-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-8">
           「いいねAI」を支える技術について
@@ -28,7 +28,7 @@ export const TechStack: React.FC = () => {
            </div>
         </div>
 
-        <div className="inline-block bg-gray-50 rounded-2xl p-6 border border-dashed border-gray-200">
+        <div className="inline-block bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
           <p className="text-lg md:text-xl font-bold text-gray-700">
             これら世界最高峰のAI 3種を、<br className="md:hidden" />
             <span className="text-red-600 text-2xl md:text-3xl font-black mx-1">1日わずか300円〜</span>でフル活用。

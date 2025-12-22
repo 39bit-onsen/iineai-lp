@@ -2,7 +2,7 @@ import React from 'react';
 
 export const CertificationSection: React.FC = () => {
   return (
-    <section className="py-16 bg-[#fdf8f7] overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
           
@@ -13,7 +13,6 @@ export const CertificationSection: React.FC = () => {
               alt="公式認定マーク" 
               className="w-full h-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-500"
               onError={(e) => {
-                // 万が一画像がない場合のプレースホルダー（実際の開発では正しいURLに差し替え）
                 e.currentTarget.src = "https://placehold.jp/40/ffffff/d4af37/400x400.png?text=認定マーク画像";
               }}
             />

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const AutomationGuide: React.FC = () => {
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="pt-20 pb-0 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           
@@ -113,8 +113,8 @@ export const AutomationGuide: React.FC = () => {
         </div>
       </div>
 
-      {/* Footer Orange Bar */}
-      <div className="mt-24 bg-[#f97316] py-10 px-4">
+      {/* Footer Orange Bar - Flush with bottom of section */}
+      <div className="mt-20 bg-[#f97316] py-10 px-4 mb-0">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-white text-2xl md:text-4xl font-black leading-tight tracking-tight">
             「アイデアを考える時間」と「投稿準備の作業時間」を<br />

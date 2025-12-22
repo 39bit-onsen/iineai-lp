@@ -42,7 +42,6 @@ const App: React.FC = () => {
         <ContactCTA />
         <UserInterview />
         <OfficialVideos />
-        {/* FAQセクション：打合せの結果次第で表示を切り替えるため一時的にコメントアウト */}
         {/* <FAQ /> */}
       </main>
 

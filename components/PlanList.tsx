@@ -4,37 +4,40 @@ import { PLANS } from '../constants';
 
 export const PlanList: React.FC = () => {
   return (
-    <section id="plans" className="py-20 bg-white">
+    <section id="plans" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2 border-l-8 border-red-600 pl-4">
-          「いいねAI」のプラン比較表
-        </h2>
-        <p className="text-gray-500 mb-12 ml-6">初期費用無料！同時に5プロジェクト以上の年間契約の場合【特別割引】あり！</p>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
+            プラン・料金
+          </h2>
+          <p className="text-gray-500 mt-4 font-bold">初期費用無料！5プロジェクト以上の同時契約で特別割引あり</p>
+          <div className="w-20 h-1.5 bg-red-600 mx-auto mt-6"></div>
+        </div>
 
         {/* Mobile View */}
         <div className="md:hidden space-y-8">
           {PLANS.map((plan, i) => (
-            <div key={i} className={`rounded-2xl overflow-hidden border-2 ${plan.isRecommended ? 'border-red-600 shadow-xl' : 'border-gray-200 shadow-md'} print-break-inside-avoid`}>
-              {plan.isRecommended && <div className="bg-red-600 text-white text-center py-2 font-bold">おすすめ！</div>}
-              <div className="p-6 text-center bg-gray-50">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                <div className="text-3xl font-black text-red-600 mb-1">¥{plan.price}<span className="text-sm text-gray-500 font-normal">/月</span></div>
-                <div className="text-sm text-gray-500">年払い: ¥{plan.annualPrice}/月相当</div>
+            <div key={i} className={`rounded-3xl overflow-hidden border-2 ${plan.isRecommended ? 'border-red-600 shadow-2xl scale-105 my-8' : 'border-gray-200 shadow-md bg-white'} print-break-inside-avoid`}>
+              {plan.isRecommended && <div className="bg-red-600 text-white text-center py-2 font-black tracking-widest text-sm uppercase">Recommended</div>}
+              <div className="p-8 text-center bg-gray-50/50">
+                <h3 className="text-xl font-black text-gray-900 mb-2">{plan.name}</h3>
+                <div className="text-4xl font-black text-red-600 mb-1">¥{plan.price}<span className="text-sm text-gray-500 font-normal">/月</span></div>
+                <div className="text-xs text-gray-400 font-bold">年払いなら月あたり ¥{plan.annualPrice}</div>
               </div>
-              <div className="p-6 bg-white">
-                <ul className="space-y-3">
-                  <li className="flex justify-between border-b pb-2">
-                    <span className="text-gray-500">SNS種類</span>
-                    <span className="font-bold">{plan.snsCount}</span>
+              <div className="p-8 bg-white">
+                <ul className="space-y-4">
+                  <li className="flex justify-between border-b border-gray-100 pb-3">
+                    <span className="text-gray-500 font-bold">SNS種類</span>
+                    <span className="font-black">{plan.snsCount}</span>
                   </li>
-                  <li className="flex justify-between border-b pb-2">
-                    <span className="text-gray-500">生成回数</span>
-                    <span className="font-bold">{plan.generationCount}</span>
+                  <li className="flex justify-between border-b border-gray-100 pb-3">
+                    <span className="text-gray-500 font-bold">生成回数</span>
+                    <span className="font-black">{plan.generationCount}</span>
                   </li>
                   {plan.videoCount && (
-                    <li className="flex justify-between border-b pb-2">
-                      <span className="text-gray-500">15秒動画</span>
-                      <span className="font-bold text-red-600">{plan.videoCount}</span>
+                    <li className="flex justify-between border-b border-gray-100 pb-3">
+                      <span className="text-gray-500 font-bold">動画制作</span>
+                      <span className="font-black text-red-600">{plan.videoCount}</span>
                     </li>
                   )}
                 </ul>
@@ -45,80 +48,56 @@ export const PlanList: React.FC = () => {
 
         {/* Desktop View */}
         <div className="hidden md:block overflow-x-auto">
-          <table className="w-full text-center border-collapse">
+          <table className="w-full text-center border-separate border-spacing-x-4">
             <thead>
               <tr>
-                <th className="p-4 bg-gray-100 text-left w-1/6 rounded-tl-lg">機能紹介</th>
+                <th className="p-6 bg-transparent text-left w-1/6"></th>
                 {PLANS.map((plan, i) => (
-                  <th key={i} className={`p-4 w-1/6 ${plan.isRecommended ? 'bg-red-50 border-t-4 border-red-600' : 'bg-gray-50'}`}>
-                    <div className="text-lg font-bold">{plan.name}</div>
+                  <th key={i} className={`p-8 w-1/6 rounded-t-3xl relative ${plan.isRecommended ? 'bg-red-600 text-white shadow-xl' : 'bg-gray-800 text-white'}`}>
+                    {plan.isRecommended && (
+                      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-red-900 py-1 px-4 rounded-full text-xs font-black tracking-widest uppercase shadow-md">Popular</div>
+                    )}
+                    <div className="text-lg font-black leading-tight">{plan.name}</div>
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
-              <tr>
-                <td className="p-4 text-left font-bold bg-gray-50">利用料金（月払い）</td>
-                {PLANS.map((p, i) => <td key={i} className="p-4 text-red-700 font-bold text-xl">¥{p.price}</td>)}
-              </tr>
-              <tr>
-                <td className="p-4 text-left font-bold bg-gray-50">登録可能なSNS</td>
-                {PLANS.map((p, i) => <td key={i} className="p-4">{p.snsCount}</td>)}
-              </tr>
-              <tr>
-                <td className="p-4 text-left font-bold bg-gray-50">AI投稿作成</td>
+            <tbody className="bg-white shadow-2xl rounded-b-3xl">
+              <tr className="border-b border-gray-100">
+                <td className="p-6 text-left font-black bg-gray-50 rounded-bl-3xl">月額料金</td>
                 {PLANS.map((p, i) => (
-                  <td key={i} className="p-4">
-                    <div className="font-bold">{p.generationCount}</div>
-                    {p.videoCount && <div className="text-xs text-red-600 mt-1">動画 {p.videoCount}</div>}
+                  <td key={i} className={`p-6 text-2xl font-black ${p.isRecommended ? 'text-red-600 bg-red-50/30' : 'text-gray-900'}`}>
+                    ¥{p.price}
                   </td>
                 ))}
               </tr>
-              <tr>
-                <td className="p-4 text-left font-bold bg-gray-50">予約投稿</td>
-                {PLANS.map((p, i) => <td key={i} className="p-4"><div className="flex justify-center text-red-600"><Check /></div></td>)}
+              <tr className="border-b border-gray-100">
+                <td className="p-6 text-left font-black bg-gray-50">SNS登録数</td>
+                {PLANS.map((p, i) => <td key={i} className={`p-6 font-bold ${p.isRecommended ? 'bg-red-50/30' : ''}`}>{p.snsCount}</td>)}
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="p-6 text-left font-black bg-gray-50">AI生成数</td>
+                {PLANS.map((p, i) => (
+                  <td key={i} className={`p-6 ${p.isRecommended ? 'bg-red-50/30' : ''}`}>
+                    <div className="font-black text-lg">{p.generationCount}</div>
+                    {p.videoCount && <div className="text-xs text-red-600 font-bold mt-1">動画 {p.videoCount}</div>}
+                  </td>
+                ))}
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="p-6 text-left font-black bg-gray-50">予約投稿</td>
+                {PLANS.map((p, i) => <td key={i} className={`p-6 ${p.isRecommended ? 'bg-red-50/30' : ''}`}><div className="flex justify-center text-emerald-500"><Check strokeWidth={4} /></div></td>)}
               </tr>
               <tr>
-                <td className="p-4 text-left font-bold bg-gray-50">AI分析</td>
+                <td className="p-6 text-left font-black bg-gray-50 rounded-br-3xl">AI分析</td>
                 {PLANS.map((p, i) => (
-                  <td key={i} className="p-4">
-                    {p.features.analysis ? <div className="flex justify-center text-red-600"><Check /></div> : <span className="text-gray-300">-</span>}
+                  <td key={i} className={`p-6 rounded-b-3xl ${p.isRecommended ? 'bg-red-50/30' : ''}`}>
+                    {p.features.analysis ? <div className="flex justify-center text-emerald-500"><Check strokeWidth={4} /></div> : <span className="text-gray-300">-</span>}
                   </td>
                 ))}
               </tr>
             </tbody>
           </table>
-        </div>
-        
-        <div className="mt-16 bg-gray-50 p-8 rounded-xl border border-gray-200 print-break-inside-avoid">
-            <h3 className="text-2xl font-bold text-center mb-8">「One」プランの違いについて</h3>
-            <div className="grid md:grid-cols-2 gap-12">
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div className="bg-red-50 text-red-800 font-bold px-4 py-1 inline-block rounded mb-4 text-sm">通常プラン（ベーシックなど）</div>
-                    <h4 className="text-xl font-bold mb-4 text-red-700">最大4つのSNSを利用可能</h4>
-                    <p className="text-gray-600 text-sm mb-6 leading-relaxed">Instagram, X, YouTube, TikTokすべての媒体を1つのプロジェクトで管理できます。媒体ごとに最適化された投稿をAIが同時に作成します。</p>
-                    <div className="flex justify-center items-center gap-3">
-                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/instagram.png" className="h-8 w-auto" alt="Instagram" />
-                        <span className="text-gray-300 font-bold">&</span>
-                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/x.png" className="h-7 w-auto" alt="X" />
-                        <span className="text-gray-300 font-bold">&</span>
-                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/youtube.png" className="h-6 w-auto" alt="YouTube" />
-                        <span className="text-gray-300 font-bold">&</span>
-                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/tiktok.png" className="h-8 w-auto" alt="TikTok" />
-                    </div>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div className="bg-gray-100 text-gray-800 font-bold px-4 py-1 inline-block rounded mb-4 text-sm">Oneプラン</div>
-                    <h4 className="text-xl font-bold mb-4 text-red-700">1つのSNSだけ選んで利用</h4>
-                    <p className="text-gray-600 text-sm mb-6 leading-relaxed">特定のSNSに特化したい場合にお得なプランです。店舗ごとにアカウントが分かれている場合などに最適なコストパフォーマンスを発揮します。</p>
-                    <div className="flex justify-center items-center gap-3">
-                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/instagram.png" className="h-8 w-auto" alt="Instagram" />
-                        <span className="text-gray-400 font-medium text-sm">or</span>
-                        <img src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/x.png" className="h-7 w-auto" alt="X" />
-                        <span className="text-gray-400 font-medium text-sm">or ...</span>
-                    </div>
-                </div>
-            </div>
         </div>
       </div>
     </section>
