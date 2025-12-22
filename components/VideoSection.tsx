@@ -30,7 +30,7 @@ export const VideoSection: React.FC = () => {
                   <div className="absolute inset-0 cursor-pointer" onClick={() => setIsPlaying(true)}>
                     <img 
                       src={thumbnail} 
-                      alt="いいねAI コンセプトムービー サムネイル" 
+                      alt="いいねAI コンセプトムービー サムネイル " 
                       className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-1000"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
@@ -85,7 +85,7 @@ export const VideoSection: React.FC = () => {
               </div>
               <div className="text-left">
                 <p className="text-sm font-black text-gray-900">
-                  累計導入社数 1,200社突破
+                  累計導入社数 XXX社突破
                 </p>
                 <p className="text-xs text-gray-500 font-bold">
                   SNSマーケター・代理店が続々と導入中
