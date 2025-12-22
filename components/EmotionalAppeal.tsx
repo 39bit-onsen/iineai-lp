@@ -19,19 +19,22 @@ export const EmotionalAppeal: React.FC = () => {
             </p>
           </div>
 
-          {/* Downward Arrow */}
+          {/* Downward Arrow - Larger size and White color for maximum visibility */}
           <div className="flex justify-center pt-4">
             <div className="animate-bounce">
               <svg 
-                width="60" 
-                height="80" 
+                width="80" 
+                height="100" 
                 viewBox="0 0 100 80" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg" 
-                className="drop-shadow-xl"
+                className="drop-shadow-2xl"
               >
+                {/* Arrow 1 (Main Layer) */}
                 <path d="M20 10L50 50L80 10" stroke="white" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M20 30L50 70L80 30" stroke="white" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
+                
+                {/* Arrow 2 (Lower Shadow-like Layer) */}
+                <path d="M20 30L50 70L80 30" stroke="white" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" opacity="0.4"/>
               </svg>
             </div>
           </div>

@@ -71,6 +71,47 @@ export const OfficialVideos: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* Youtube Link Action Card */}
+        <div className="mt-28 text-center">
+          <a 
+            href="https://www.youtube.com/@いいねAI" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex flex-col md:flex-row items-center gap-6 bg-white px-12 py-8 rounded-[2.5rem] shadow-2xl hover:shadow-brand-600/10 transition-all border border-gray-100 group overflow-hidden relative"
+          >
+            {/* Hover Shine Effect */}
+            <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-45 -translate-x-full group-hover:animate-[shine_1.5s_ease-in-out_infinite]"></div>
+            
+            <div className="flex items-center gap-4 relative z-10">
+              <div className="p-1 group-hover:scale-110 transition-transform duration-500">
+                <img 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/youtube.png" 
+                  alt="YouTube Logo"
+                  className="h-10 md:h-12 w-auto object-contain drop-shadow-sm"
+                />
+              </div>
+              <div className="text-left">
+                <span className="block text-gray-900 font-black text-2xl md:text-3xl tracking-tighter leading-none mb-1">
+                  公式YouTubeチャンネル
+                </span>
+                <span className="block text-gray-400 text-xs font-bold tracking-widest uppercase">Official Channel</span>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-3 text-brand-600 font-black text-xl border-t md:border-t-0 md:border-l border-gray-200 pt-6 md:pt-0 md:pl-8 relative z-10">
+              <span>他の活用動画もチェック</span>
+              <div className="p-2 bg-brand-50 rounded-full group-hover:translate-x-1 transition-transform">
+                <ExternalLink size={24} strokeWidth={3} />
+              </div>
+            </div>
+          </a>
+          
+          <p className="mt-8 text-gray-400 font-bold text-sm">
+            最新機能や導入事例を随時アップロード中
+          </p>
+        </div>
+
       </div>
     </section>
   );
