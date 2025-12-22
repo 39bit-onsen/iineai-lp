@@ -4,10 +4,11 @@ export const IntroductionEffect: React.FC = () => {
   return (
     <section className="py-24 bg-orange-50 overflow-hidden border-y border-orange-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
+        {/* Changed lg:items-start to lg:items-center for overall vertical alignment */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-center gap-12 lg:gap-20">
           
-          {/* Left Column: Visuals */}
-          <div className="w-full lg:w-2/5 flex flex-col items-center lg:items-start">
+          {/* Left Column: Visuals (Smartphone Mockups) */}
+          <div className="w-full lg:w-2/5 flex flex-col items-center">
             <div className="relative w-full max-w-[420px] h-[380px] md:h-[460px]">
               {/* Back Phone */}
               <div className="absolute top-12 right-4 w-[180px] md:w-[210px] aspect-[9/19] bg-white rounded-[2rem] border-[6px] border-gray-100 shadow-xl overflow-hidden z-0 transform rotate-2">
@@ -31,7 +32,7 @@ export const IntroductionEffect: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 md:mt-12 text-center lg:text-left w-full pl-4">
+            <div className="mt-8 md:mt-12 text-center w-full">
               <a 
                 href="https://iine-ai.com/cases/shokuhin/" 
                 target="_blank" 
