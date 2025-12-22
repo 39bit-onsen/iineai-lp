@@ -74,8 +74,12 @@ export const VideoSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start pt-8 border-t border-gray-100">
               <div className="flex -space-x-3 overflow-hidden">
                 {[1,2,3,4].map(i => (
-                  <div key={i} className="inline-block h-12 w-12 rounded-full ring-4 ring-white bg-gray-200 border border-gray-300">
-                    <img src={`https://i.pravatar.cc/150?u=${i+10}`} alt="user" className="rounded-full" />
+                  <div key={i} className="inline-block h-12 w-12 rounded-full ring-4 ring-white bg-white border border-gray-100 shadow-sm overflow-hidden">
+                    <img 
+                      src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/favicon.png" 
+                      alt="User Icon" 
+                      className="w-full h-full object-contain p-2" 
+                    />
                   </div>
                 ))}
               </div>
