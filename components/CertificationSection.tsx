@@ -9,7 +9,7 @@ export const CertificationSection: React.FC = () => {
           {/* Left: Certification Mark */}
           <div className="w-full max-w-[280px] md:max-w-[340px] flex-shrink-0">
             <img 
-              src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/certification_badge.png" 
+              src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/certification_badge.png" 
               alt="公式認定マーク" 
               className="w-full h-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-500"
               onError={(e) => {

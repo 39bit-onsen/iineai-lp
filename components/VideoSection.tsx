@@ -76,7 +76,7 @@ export const VideoSection: React.FC = () => {
                 {[1,2,3,4].map(i => (
                   <div key={i} className="inline-block h-12 w-12 rounded-full ring-4 ring-white bg-white border border-gray-100 shadow-sm overflow-hidden">
                     <img 
-                      src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/iineaifavicon.png" 
+                      src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/iineaifavicon.png" 
                       alt="User Icon" 
                       className="w-full h-full object-contain p-2" 
                     />

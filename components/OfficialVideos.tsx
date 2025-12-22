@@ -86,7 +86,7 @@ export const OfficialVideos: React.FC = () => {
             <div className="flex items-center gap-4 relative z-10">
               <div className="p-1 group-hover:scale-110 transition-transform duration-500">
                 <img 
-                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/youtube.png" 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/youtube.png" 
                   alt="YouTube Logo"
                   className="h-10 md:h-12 w-auto object-contain drop-shadow-sm"
                 />

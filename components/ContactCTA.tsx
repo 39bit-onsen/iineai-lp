@@ -13,7 +13,7 @@ export const ContactCTA: React.FC = () => {
         <div className="text-center mb-10">
           <div className="flex flex-wrap items-center justify-center gap-2">
             <img 
-              src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/logotype_japanese.png" 
+              src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/iine_ai_logo_full.png" 
               alt="いいねAI" 
               className="h-8 md:h-12 w-auto object-contain brightness-0 invert" 
             />

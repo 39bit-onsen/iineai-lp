@@ -13,7 +13,7 @@ export const TrustLogos: React.FC = () => {
         
         <div className="flex justify-center items-center">
           <img 
-            src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/trust_logos.png" 
+            src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/trust_logos.png" 
             alt="導入企業一覧" 
             className="max-w-full h-auto object-contain opacity-90 transition-opacity hover:opacity-100"
             onError={(e) => {

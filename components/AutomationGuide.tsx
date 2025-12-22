@@ -20,7 +20,7 @@ export const AutomationGuide: React.FC = () => {
             
             <div className="mb-8 w-full max-w-[320px] lg:max-w-[420px]">
               <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/logotype_japanese.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/iine_ai_logo_full.png" 
                 alt="いいねAI"
                 className="w-full h-auto object-contain drop-shadow-sm"
               />
@@ -57,9 +57,9 @@ export const AutomationGuide: React.FC = () => {
               
               {/* Row Rendering Function */}
               {[
-                { label: '調査', traditional: '約12時間', ai: '1分', reduction: '99.8%', traditionalWidth: '40%', aiWidth: '2%' },
-                { label: '企画・投稿作成', traditional: '約36時間', ai: '10分', reduction: '99.5%', traditionalWidth: '95%', aiWidth: '8%' },
-                { label: '分析', traditional: '約24時間', ai: '1分', reduction: '99.9%', traditionalWidth: '70%', aiWidth: '2%' }
+                { label: '調査', traditional: '約12時間', iine: '1分', reduction: '99.8%', traditionalWidth: '40%', iineWidth: '2%' },
+                { label: '企画・投稿作成', traditional: '約36時間', iine: '10分', reduction: '99.5%', traditionalWidth: '95%', iineWidth: '8%' },
+                { label: '分析', traditional: '約24時間', iine: '1分', reduction: '99.9%', traditionalWidth: '70%', iineWidth: '2%' }
               ].map((row, idx) => (
                 <div key={idx} className="flex items-center gap-2 md:gap-4 relative">
                   {/* Vertical Label */}
@@ -83,7 +83,7 @@ export const AutomationGuide: React.FC = () => {
                       <div className="flex items-center gap-3">
                         <span className="text-[10px] md:text-xs font-bold text-[#f97316] w-10 whitespace-nowrap">導入後</span>
                         <div className="flex-1 h-5 bg-orange-50 rounded-full overflow-hidden">
-                          <div className="h-full bg-[#f97316] rounded-full" style={{ width: row.aiWidth }}></div>
+                          <div className="h-full bg-[#f97316] rounded-full" style={{ width: row.iineWidth }}></div>
                         </div>
                         {/* THE ORANGE BORDER BOX - Now showing Reduction % */}
                         <div className="border-4 border-[#f97316] bg-white px-2 py-1 rounded-md min-w-[80px] flex items-center justify-center shadow-sm">
@@ -99,8 +99,8 @@ export const AutomationGuide: React.FC = () => {
                       <div className="bg-[#f97316] text-white px-4 py-3 md:px-6 md:py-4 rounded-xl flex flex-col items-center justify-center min-w-[90px] md:min-w-[110px]">
                         <span className="text-[10px] md:text-xs font-bold mb-1 drop-shadow-sm">いいねAI</span>
                         <div className="flex items-baseline gap-0.5">
-                          <span className="text-2xl md:text-4xl font-black leading-none">{row.ai.replace(/分|時間/, '')}</span>
-                          <span className="text-xs md:text-sm font-bold">{row.ai.includes('分') ? '分' : 'h'}</span>
+                          <span className="text-2xl md:text-4xl font-black leading-none">{row.iine.replace(/分|時間/, '')}</span>
+                          <span className="text-xs md:text-sm font-bold">{row.iine.includes('分') ? '分' : 'h'}</span>
                         </div>
                       </div>
                     </div>

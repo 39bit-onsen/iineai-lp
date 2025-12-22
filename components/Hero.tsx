@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
             <div className="w-full">
               {/* Updated to provided CDN URL for preview support */}
               <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/logotype_japanese.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/iine_ai_logo_full.png" 
                 alt="いいねAI - SNS運用超効率化AIツール"
                 className="w-full max-w-lg mx-auto lg:mx-0 object-contain drop-shadow-md"
               />
@@ -29,22 +29,22 @@ export const Hero: React.FC = () => {
             {/* Real Brand SNS icons - Now centered relative to the badge above */}
             <div className="flex justify-center items-center gap-8 py-2 w-full max-w-lg">
               <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/instagram.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/instagram.png" 
                 className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="Instagram" 
               />
               <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/x.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/x.png" 
                 className="h-11 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="X" 
               />
               <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/youtube.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/youtube.png" 
                 className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="YouTube" 
               />
               <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/tiktok.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/tiktok.png" 
                 className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
                 alt="TikTok" 
               />
@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <div className="w-full h-full bg-white flex items-center justify-center overflow-hidden">
                     <img 
-                      src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/topphone.png" 
+                      src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/topphone.png" 
                       alt="いいねAI アプリ画面デモ"
                       className="w-full h-full object-contain"
                     />

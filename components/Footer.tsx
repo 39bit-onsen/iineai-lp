@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
             {/* Logo Image - Removed brightness-0 invert to keep original colors */}
             <div className="flex justify-center mb-8">
               <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/logotype_japanese.png" 
+                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/iine_ai_logo_full.png" 
                 alt="いいねAI" 
                 className="h-12 md:h-16 w-auto object-contain"
               />

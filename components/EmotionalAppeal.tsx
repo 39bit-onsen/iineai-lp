@@ -45,7 +45,7 @@ export const EmotionalAppeal: React.FC = () => {
               <span>ですが</span>
               <div className="bg-white p-3 rounded-xl shadow-lg inline-block transform -rotate-1">
                 <img 
-                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/logotype_japanese.png" 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/iine_ai_logo_full.png" 
                   alt="いいねAI" 
                   className="h-10 md:h-14 w-auto object-contain"
                 />

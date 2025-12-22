@@ -13,7 +13,7 @@ export const IntroductionEffect: React.FC = () => {
               {/* Back Phone */}
               <div className="absolute top-12 right-4 w-[180px] md:w-[210px] aspect-[9/19] bg-white rounded-[2rem] border-[6px] border-gray-100 shadow-xl overflow-hidden z-0 transform rotate-2">
                 <img 
-                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/InstagramB.png" 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/InstagramB.png" 
                   alt="Instagram Post Case" 
                   className="w-full h-full object-cover"
                 />
@@ -25,7 +25,7 @@ export const IntroductionEffect: React.FC = () => {
                   <div className="w-12 h-2 bg-black rounded-full mt-1"></div>
                 </div>
                 <img 
-                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/iineai-lp@main/assets/InstagramA.png" 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/InstagramA.png" 
                   alt="Instagram Profile Case" 
                   className="w-full h-full object-cover"
                 />
