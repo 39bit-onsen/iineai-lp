@@ -14,6 +14,7 @@ import { Features } from './components/Features';
 import { ComparisonTable } from './components/ComparisonTable';
 import { PlanList } from './components/PlanList';
 import { Agency } from './components/Agency';
+import { AgencyV2 } from './components/AgencyV2';
 import { ContactCTA } from './components/ContactCTA';
 import { UserInterview } from './components/UserInterview';
 import { OfficialVideos } from './components/OfficialVideos';
@@ -39,6 +40,7 @@ const App: React.FC = () => {
         <ComparisonTable />
         <PlanList />
         <Agency />
+        <AgencyV2 />
         <ContactCTA />
         <UserInterview />
         <OfficialVideos />
