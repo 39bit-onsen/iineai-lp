@@ -5,9 +5,10 @@ export const TrustLogos: React.FC = () => {
     <section className="py-16 bg-gray-50 overflow-hidden border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-xl md:text-3xl font-medium text-gray-700 leading-relaxed tracking-wider">
-            中小企業から大手企業まで<br />
-            幅広い企業様にご利用いただいております
+          <h2 className="text-[5.5vw] sm:text-2xl md:text-3xl font-medium text-gray-700 leading-relaxed tracking-wider">
+            <span className="block sm:hidden mb-2">中小企業から大手企業まで</span>
+            <span className="block sm:hidden">幅広い企業様にご利用いただいております</span>
+            <span className="hidden sm:inline">中小企業から大手企業まで 幅広い企業様にご利用いただいております</span>
           </h2>
         </div>
         

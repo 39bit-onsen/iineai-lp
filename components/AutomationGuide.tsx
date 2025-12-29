@@ -30,8 +30,8 @@ export const AutomationGuide: React.FC = () => {
               <p className="text-2xl md:text-3xl font-black text-gray-900 leading-tight">
                 いいねAIで大幅な効率化を実現
               </p>
-              <p className="text-base md:text-lg font-bold text-gray-600">
-                作業時間の削減、運用の質の向上が大幅に見込めます！
+              <p className="text-[3.8vw] sm:text-lg font-bold text-gray-600 whitespace-nowrap">
+                作業時間の削減、運用の質の向上が大幅は見込めます！
               </p>
             </div>
           </div>
@@ -48,9 +48,10 @@ export const AutomationGuide: React.FC = () => {
 
           {/* Right Side: Comparison Visualization */}
           <div className="w-full lg:w-6/12 bg-gray-50 p-1 md:p-2 rounded-xl shadow-inner">
-            {/* Table Header */}
-            <div className="bg-[#111827] text-white text-[11px] md:text-sm py-3 px-4 font-bold text-center rounded-t-lg">
-              SNS運用に掛かる1ヶ月間の平均時間 <span className="font-normal opacity-70">（※動画10本制作と仮定）</span>
+            {/* Table Header - Optimized for mobile: 2 lines */}
+            <div className="bg-[#111827] text-white text-[11px] md:text-sm py-3 px-4 font-bold text-center rounded-t-lg leading-relaxed">
+              SNS運用に掛かる1ヶ月間の平均時間 <br className="sm:hidden" />
+              <span className="font-normal opacity-70">（※動画10本制作と仮定）</span>
             </div>
 
             <div className="bg-white p-4 md:p-6 space-y-10 rounded-b-lg border-x border-b border-gray-200">
@@ -116,9 +117,10 @@ export const AutomationGuide: React.FC = () => {
       {/* Footer Orange Bar - Flush with bottom of section */}
       <div className="mt-20 bg-[#f97316] py-10 px-4 mb-0">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-white text-2xl md:text-4xl font-black leading-tight tracking-tight">
-            「アイデアを考える時間」と「投稿準備の作業時間」を<br />
-            大幅に削減することが可能！
+          <h3 className="text-white text-xl md:text-4xl font-black leading-tight tracking-tight">
+            <span className="block sm:inline">「アイデアを考える時間」と</span>
+            <span className="block sm:inline">「投稿準備の作業時間」を</span>
+            <span className="block sm:inline">大幅に削減することが可能！</span>
           </h3>
         </div>
       </div>

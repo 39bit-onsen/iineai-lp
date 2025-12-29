@@ -101,36 +101,37 @@ export const ImpactStats: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {stats.map((s, i) => (
-            <div key={i} className="bg-white p-8 rounded-3xl shadow-xl border border-orange-100 flex flex-col h-full transform transition-all hover:-translate-y-1">
+            <div key={i} className="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-orange-100 flex flex-col h-full transform transition-all hover:-translate-y-1">
               <div className="flex items-center gap-4 mb-6">
                 <div className={`p-3 rounded-2xl text-white ${s.color}`}>
                   <s.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-black text-gray-900">{s.label}</h3>
+                <h3 className="text-lg md:text-xl font-black text-gray-900 tracking-tight">{s.label}</h3>
               </div>
 
-              <div className="flex items-center justify-between bg-orange-50/50 rounded-2xl p-6 mb-6 border border-orange-100/50">
-                <div className="text-center flex-1">
-                  <div className="text-xs text-gray-400 font-bold mb-1 uppercase tracking-tighter">Before</div>
-                  <div className="text-2xl font-bold text-gray-400">
-                    {s.prefix}{s.before.toLocaleString()}<span className="text-sm ml-1">{s.unit}</span>
+              {/* Mobile-optimized box (Fluid sizing for After, compact Before for mobile only) */}
+              <div className="flex items-center justify-between bg-orange-50/50 rounded-2xl p-4 md:p-6 mb-6 border border-orange-100/50 overflow-hidden">
+                <div className="text-left md:text-center flex-shrink-0 transform scale-90 sm:scale-100 origin-left">
+                  <div className="text-[10px] text-gray-400 font-bold mb-1 uppercase tracking-tighter">Before</div>
+                  <div className="text-sm sm:text-base md:text-2xl font-bold text-gray-400 leading-none whitespace-nowrap">
+                    {s.prefix}{s.before.toLocaleString()}<span className="text-[10px] md:text-sm ml-0.5">{s.unit}</span>
                   </div>
                 </div>
 
-                <div className="px-4">
-                  <ArrowRight className="text-[#f97316] w-8 h-8 opacity-50" />
+                <div className="px-1 sm:px-2">
+                  <ArrowRight className="text-[#f97316] w-4 h-4 sm:w-8 sm:h-8 opacity-50" />
                 </div>
 
-                <div className="text-center flex-1">
-                  <div className="text-xs text-[#f97316] font-bold mb-1 uppercase tracking-tighter">After</div>
-                  <div className="text-4xl md:text-5xl font-black text-[#f97316] tracking-tighter">
+                <div className="text-right md:text-center flex-1 min-w-0">
+                  <div className="text-[10px] text-[#f97316] font-bold mb-1 uppercase tracking-tighter">After</div>
+                  <div className="text-[7.5vw] sm:text-4xl md:text-5xl font-black text-[#f97316] tracking-tighter leading-none truncate">
                     <CountUp end={s.after} prefix={s.prefix} />
-                    <span className="text-lg md:text-xl ml-1">{s.afterUnit}</span>
+                    <span className="text-[3vw] sm:text-xl ml-0.5">{s.afterUnit}</span>
                   </div>
                 </div>
               </div>
 
-              <p className="text-gray-600 font-bold leading-relaxed border-l-4 border-orange-200 pl-4 py-1">
+              <p className="text-xs md:text-base text-gray-600 font-bold leading-relaxed border-l-4 border-orange-200 pl-4 py-1">
                 {s.desc}
               </p>
             </div>
