@@ -4,23 +4,6 @@ import { Play, ExternalLink } from 'lucide-react';
 export const OfficialVideos: React.FC = () => {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
-  const videoItems = [
-    {
-      title: "【いいねAI】コンセプト・機能紹介ムービー",
-      description: "AIがどのようにSNS運用を効率化するのか、実際の画面を交えて詳しく解説しています。",
-      thumbnail: "https://img.youtube.com/vi/4ooDakvthZo/maxresdefault.jpg",
-      tag: "CONCEPT",
-      embedId: "4ooDakvthZo?si=KR0dZ9FnYn-CDMwN"
-    },
-    {
-      title: "【いいねAI】コンセプト・機能紹介ムービー2",
-      description: "AIがどのようにSNS運用を効率化するのか、実際の画面を交えて詳しく解説しています。",
-      thumbnail: "https://img.youtube.com/vi/4ooDakvthZo/maxresdefault.jpg",
-      tag: "DEMO",
-      embedId: "4ooDakvthZo?si=KR0dZ9FnYn-CDMwN"
-    }
-  ];
-
   const handlePlay = (index: number) => {
     setPlayingIndex(index);
   };
@@ -41,46 +24,93 @@ export const OfficialVideos: React.FC = () => {
         </div>
 
         <div className="space-y-24">
-          {videoItems.map((video, idx) => (
-            <div key={idx} className="group flex flex-col items-center">
-              <div className="w-full mb-10 text-center px-4">
-                <div className="flex items-center justify-center gap-2 mb-3">
-                  <span className="bg-gray-800 text-white text-[10px] font-black px-2 py-0.5 rounded tracking-widest">{video.tag}</span>
-                </div>
-                <h3 className="text-2xl md:text-4xl font-black text-gray-800 mb-4 group-hover:text-brand-600 transition-colors duration-300 tracking-tight">{video.title}</h3>
-                <p className="text-base md:text-xl text-gray-500 font-bold max-w-3xl mx-auto leading-relaxed md:whitespace-nowrap">{video.description}</p>
+          {/* Video 1: Demo Video */}
+          <div className="group flex flex-col items-center">
+            <div className="w-full mb-10 text-center px-4">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <span className="bg-gray-800 text-white text-[10px] font-black px-2 py-0.5 rounded tracking-widest">FULL DEMO</span>
               </div>
-
-              <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white bg-gray-900">
-                {playingIndex === idx ? (
-                  <iframe className="absolute inset-0 w-full h-full" src={`https://www.youtube.com/embed/${video.embedId}&autoplay=1&controls=1`} title={video.title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                ) : (
-                  <>
-                    <div className="absolute inset-0 cursor-pointer" onClick={() => handlePlay(idx)}>
-                      <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
-                    </div>
-                    <div className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer" onClick={() => handlePlay(idx)}>
-                      <div className="w-24 h-24 md:w-32 md:h-32 bg-brand-600 text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-500 border-4 border-white/30 backdrop-blur-sm">
-                        <Play size={48} className="fill-current ml-2" />
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
+              <h3 className="text-2xl md:text-4xl font-black text-gray-800 mb-4 group-hover:text-brand-600 transition-colors duration-300 tracking-tight leading-tight">
+                {/* Responsive Title for Video 1 */}
+                <span className="md:hidden">
+                  【15分完全攻略】<br />いいねAI全機能デモ
+                </span>
+                <span className="hidden md:inline">
+                  【15分完全攻略】4大SNS同時運用の全てを実演！<br />いいねAI全機能デモ
+                </span>
+              </h3>
+              <p className="hidden md:block text-base md:text-xl text-gray-500 font-bold max-w-3xl mx-auto leading-relaxed">
+                4大SNSの運用をわずか数分で完結させる具体的なデモ映像。AIの力を最大限に引き出す実演動画です。
+              </p>
             </div>
-          ))}
+
+            <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white bg-gray-900">
+              {playingIndex === 0 ? (
+                <iframe className="absolute inset-0 w-full h-full" src={`https://www.youtube.com/embed/U6a5_EtwGjI?autoplay=1&controls=1`} title="いいねAI全機能デモ" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              ) : (
+                <>
+                  <div className="absolute inset-0 cursor-pointer" onClick={() => handlePlay(0)}>
+                    <img src="https://img.youtube.com/vi/U6a5_EtwGjI/maxresdefault.jpg" alt="いいねAI全機能デモ" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer" onClick={() => handlePlay(0)}>
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-brand-600 text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-500 border-4 border-white/30 backdrop-blur-sm">
+                      <Play size={48} className="fill-current ml-2" />
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* Video 2: Concept Video */}
+          <div className="group flex flex-col items-center">
+            <div className="w-full mb-10 text-center px-4">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <span className="bg-gray-800 text-white text-[10px] font-black px-2 py-0.5 rounded tracking-widest">CONCEPT</span>
+              </div>
+              <h3 className="text-2xl md:text-4xl font-black text-gray-800 mb-4 group-hover:text-brand-600 transition-colors duration-300 tracking-tight leading-tight">
+                {/* Responsive Title for Video 2 */}
+                <span className="md:hidden">
+                  【いいねAI】コンセプト<br />機能紹介ムービー
+                </span>
+                <span className="hidden md:inline">
+                  【いいねAI】コンセプト・機能紹介ムービー
+                </span>
+              </h3>
+              <p className="hidden md:block text-base md:text-xl text-gray-500 font-bold max-w-3xl mx-auto leading-relaxed">
+                SNS運用の常識を覆す「いいねAI」の主要コンセプトと革新的な機能をダイジェストで紹介します。
+              </p>
+            </div>
+
+            <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white bg-gray-900">
+              {playingIndex === 1 ? (
+                <iframe className="absolute inset-0 w-full h-full" src={`https://www.youtube.com/embed/Nnw1d2GP_sg?autoplay=1&controls=1`} title="コンセプト紹介ムービー" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              ) : (
+                <>
+                  <div className="absolute inset-0 cursor-pointer" onClick={() => handlePlay(1)}>
+                    <img src="https://img.youtube.com/vi/Nnw1d2GP_sg/maxresdefault.jpg" alt="コンセプト紹介ムービー" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer" onClick={() => handlePlay(1)}>
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-brand-600 text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-500 border-4 border-white/30 backdrop-blur-sm">
+                      <Play size={48} className="fill-current ml-2" />
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Youtube Link Action Card */}
         <div className="mt-28 text-center px-4">
           <a 
-            href="https://www.youtube.com/@いいねAI" 
+            href="https://www.youtube.com/@%E3%81%84%E3%81%84%E3%81%ADAI" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex flex-col md:flex-row items-center gap-4 md:gap-6 bg-white px-8 md:px-12 py-6 md:py-8 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl hover:shadow-brand-600/10 transition-all border border-gray-100 group overflow-hidden relative w-full md:w-auto"
           >
-            {/* Hover Shine Effect */}
             <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-45 -translate-x-full group-hover:animate-[shine_1.5s_ease-in-out_infinite]"></div>
             
             <div className="flex items-center gap-4 relative z-10">
@@ -112,7 +142,6 @@ export const OfficialVideos: React.FC = () => {
             最新機能や導入事例を随時アップロード中
           </p>
         </div>
-
       </div>
     </section>
   );

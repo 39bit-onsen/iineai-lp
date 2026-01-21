@@ -4,14 +4,13 @@ import { CheckCircle2, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 export const AgencyV2: React.FC = () => {
   return (
     <section className="py-24 bg-slate-900 overflow-hidden relative text-white">
-      {/* Decorative background components */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-600/10 skew-x-[-15deg] translate-x-1/2 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-orange-600/10 skew-x-[15deg] -translate-x-1/2 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
-          {/* Left Side: Problem Solving & Value Prop */}
+          {/* Left Side */}
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-600/20 border border-brand-600/30 rounded-full text-brand-400 text-[10px] md:text-xs font-black tracking-widest uppercase">
@@ -55,7 +54,7 @@ export const AgencyV2: React.FC = () => {
             </div>
           </div>
           
-          {/* Right Side: Pricing / Simulation Card */}
+          {/* Right Side: Pricing Card */}
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-brand-600 to-orange-600 rounded-[2.5rem] blur-2xl opacity-20"></div>
             
@@ -100,10 +99,13 @@ export const AgencyV2: React.FC = () => {
                   </div>
                 </div>
 
-                <button className="group w-full bg-slate-900 text-white font-black py-4 md:py-5 px-6 rounded-2xl hover:bg-black transition-all shadow-xl text-base md:text-lg flex items-center justify-center gap-3">
+                <a 
+                  href="https://iine-ai.com/contact/" 
+                  className="group w-full bg-slate-900 text-white font-black py-4 md:py-5 px-6 rounded-2xl hover:bg-black transition-all shadow-xl text-base md:text-lg flex items-center justify-center gap-3"
+                >
                   プランについて相談する
                   <ArrowRight className="group-hover:translate-x-1 transition-transform w-5 h-5" />
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -9,7 +9,6 @@ export const Hero: React.FC = () => {
           {/* Left Column: Logo & Info */}
           <div className="lg:col-span-5 text-center lg:text-left z-10 flex flex-col items-center lg:items-start space-y-8">
             <div className="w-full">
-              {/* Updated to provided CDN URL for preview support */}
               <img 
                 src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/iine_ai_logo_full.png" 
                 alt="いいねAI - SNS運用超効率化AIツール"
@@ -26,28 +25,36 @@ export const Hero: React.FC = () => {
               特許出願済
             </div>
 
-            {/* Real Brand SNS icons - Now centered relative to the badge above */}
+            {/* Real Brand SNS icons - Now linked to official accounts */}
             <div className="flex justify-center items-center gap-8 py-2 w-full max-w-lg">
-              <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/instagram.png" 
-                className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
-                alt="Instagram" 
-              />
-              <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/x.png" 
-                className="h-11 w-auto drop-shadow-sm transition-transform hover:scale-110" 
-                alt="X" 
-              />
-              <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/youtube.png" 
-                className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
-                alt="YouTube" 
-              />
-              <img 
-                src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/tiktok.png" 
-                className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
-                alt="TikTok" 
-              />
+              <a href="https://www.instagram.com/iineai.sns/" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/instagram.png" 
+                  className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                  alt="Instagram" 
+                />
+              </a>
+              <a href="https://x.com/iineAI_sns" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/x.png" 
+                  className="h-11 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                  alt="X" 
+                />
+              </a>
+              <a href="https://www.youtube.com/@%E3%81%84%E3%81%84%E3%81%ADAI" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/youtube.png" 
+                  className="h-10 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                  alt="YouTube" 
+                />
+              </a>
+              <a href="https://www.tiktok.com/@iineai_sns" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/tiktok.png" 
+                  className="h-12 w-auto drop-shadow-sm transition-transform hover:scale-110" 
+                  alt="TikTok" 
+                />
+              </a>
             </div>
 
             <div className="pt-4 no-print w-full max-w-lg flex justify-center">
@@ -74,7 +81,6 @@ export const Hero: React.FC = () => {
                     />
                 </div>
             </div>
-            {/* Background glowing circle behind phone */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/20 rounded-full blur-3xl -z-10"></div>
           </div>
 

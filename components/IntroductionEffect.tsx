@@ -30,17 +30,6 @@ export const IntroductionEffect: React.FC = () => {
                 />
               </div>
             </div>
-
-            <div className="mt-6 md:mt-12 text-center w-full px-4">
-              <a 
-                href="https://iine-ai.com/cases/shokuhin/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-orange-600 hover:underline text-[10px] md:text-sm font-bold tracking-tight break-all"
-              >
-                https://iine-ai.com/cases/shokuhin/
-              </a>
-            </div>
           </div>
 
           {/* Right Column: Text Content */}

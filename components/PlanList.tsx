@@ -55,16 +55,14 @@ export const PlanList: React.FC = () => {
                 </div>
               </div>
 
-              {/* Body: Feature Details with Labels for easy comparison */}
+              {/* Body: Feature Details */}
               <div className="p-8 space-y-6 flex-grow">
                 <div className="space-y-4">
-                  {/* SNS Count */}
                   <div className="flex flex-col">
                     <span className={`text-[10px] font-black uppercase tracking-wider mb-1 ${plan.isRecommended ? 'text-white/60' : 'text-gray-400'}`}>SNS登録数</span>
                     <div className="font-black text-lg">{plan.snsCount}</div>
                   </div>
 
-                  {/* AI Generation Count */}
                   <div className="flex flex-col">
                     <span className={`text-[10px] font-black uppercase tracking-wider mb-1 ${plan.isRecommended ? 'text-white/60' : 'text-gray-400'}`}>AI生成回数</span>
                     <div className="font-black text-lg flex items-baseline gap-1">
@@ -78,7 +76,6 @@ export const PlanList: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Feature Checks */}
                   <div className="pt-4 space-y-3 border-t border-current opacity-10"></div>
                   
                   <div className="flex items-center gap-3">
@@ -103,16 +100,19 @@ export const PlanList: React.FC = () => {
                 </div>
               </div>
 
-              {/* Footer: CTA style link */}
+              {/* Footer: CTA Button */}
               <div className="p-6 pt-0">
-                <div className={`w-full py-4 px-4 rounded-xl font-black text-center text-sm transition-colors border-2 shadow-sm
-                  ${plan.isRecommended 
-                    ? 'bg-white text-brand-600 border-white hover:bg-brand-50' 
-                    : 'bg-gray-900 text-white border-gray-900 hover:bg-black'
-                  }
-                `}>
+                <a 
+                  href="https://iine-ai.com/contact/" 
+                  className={`block w-full py-4 px-4 rounded-xl font-black text-center text-sm transition-colors border-2 shadow-sm
+                    ${plan.isRecommended 
+                      ? 'bg-white text-brand-600 border-white hover:bg-brand-50' 
+                      : 'bg-gray-900 text-white border-gray-900 hover:bg-black'
+                    }
+                  `}
+                >
                   このプランで相談する
-                </div>
+                </a>
               </div>
             </div>
           ))}

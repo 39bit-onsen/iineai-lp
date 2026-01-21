@@ -4,7 +4,6 @@ import { FileText, Mail } from 'lucide-react';
 export const ContactCTA: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-br from-[#f97316] via-[#fb923c] to-[#f59e0b] overflow-hidden relative">
-      {/* Subtle overlay */}
       <div className="absolute inset-0 bg-white/5 pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -69,7 +68,7 @@ export const ContactCTA: React.FC = () => {
             </h3>
             
             <a 
-              href="https://iine-ai.com/support/" 
+              href="https://iine-ai.com/contact/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-full max-w-[200px] bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-3 px-6 rounded-full shadow-md transition-all text-base md:text-lg flex items-center justify-center"

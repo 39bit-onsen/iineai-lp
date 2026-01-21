@@ -24,13 +24,8 @@ export const Footer: React.FC = () => {
             </a>
         </div>
         
-        <div className="border-t border-gray-800 pt-8 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-start md:items-center">
-          <p className="order-2 md:order-1 mt-6 md:mt-0">© 2025 Iine AI. All rights reserved.</p>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-4 order-1 md:order-2 items-start md:items-center w-full md:w-auto">
-             <a href="#" className="hover:text-white transition-colors">運営会社</a>
-             <a href="#" className="hover:text-white transition-colors">プライバシーポリシー</a>
-             <a href="#" className="hover:text-white transition-colors">特定商取引法に基づく表記</a>
-          </div>
+        <div className="border-t border-gray-800 pt-8 text-sm text-gray-500 flex flex-col md:flex-row justify-center items-center">
+          <p>© 2025 Iine AI. All rights reserved.</p>
         </div>
       </div>
     </footer>

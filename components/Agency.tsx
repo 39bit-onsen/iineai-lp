@@ -4,7 +4,6 @@ import { ChevronRight } from 'lucide-react';
 export const Agency: React.FC = () => {
   return (
     <section className="py-16 bg-brand-600 overflow-hidden relative text-white print:bg-white print:text-black">
-      {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/5 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -28,7 +27,6 @@ export const Agency: React.FC = () => {
               </div>
             </div>
             
-            {/* Benefits Box - Red Translucent */}
             <div className="bg-white/10 p-6 rounded-2xl border border-white/20 shadow-xl">
                <h3 className="text-lg md:text-xl font-black mb-4 flex items-center gap-2">
                  <span className="text-yellow-300">★</span> 代理店特典
@@ -80,11 +78,13 @@ export const Agency: React.FC = () => {
               </div>
             </div>
 
-            {/* Dark Button at the bottom of the card */}
             <div className="p-5 md:p-6 pt-0 no-print">
-                 <button className="w-full bg-[#111827] text-white font-black py-4 px-6 rounded-xl hover:bg-black transition-all shadow-xl text-lg transform hover:-translate-y-0.5">
+                 <a 
+                   href="https://iine-ai.com/contact/" 
+                   className="block w-full bg-[#111827] text-white font-black py-4 px-6 rounded-xl hover:bg-black transition-all shadow-xl text-lg text-center transform hover:-translate-y-0.5"
+                 >
                     代理店について問い合わせる
-                 </button>
+                 </a>
             </div>
           </div>
         </div>
