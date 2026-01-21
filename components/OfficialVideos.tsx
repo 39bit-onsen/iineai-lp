@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Play, ExternalLink } from 'lucide-react';
 
@@ -24,7 +25,7 @@ export const OfficialVideos: React.FC = () => {
         </div>
 
         <div className="space-y-24">
-          {/* Video 1: Demo Video */}
+          {/* Video 1: Industry First Video */}
           <div className="group flex flex-col items-center">
             <div className="w-full mb-10 text-center px-4">
               <div className="flex items-center justify-center gap-2 mb-3">
@@ -33,24 +34,24 @@ export const OfficialVideos: React.FC = () => {
               <h3 className="text-2xl md:text-4xl font-black text-gray-800 mb-4 group-hover:text-brand-600 transition-colors duration-300 tracking-tight leading-tight">
                 {/* Responsive Title for Video 1 */}
                 <span className="md:hidden">
-                  【15分完全攻略】<br />いいねAI全機能デモ
+                  【業界初】<br />SNS運用がAIで自動化！
                 </span>
                 <span className="hidden md:inline">
-                  【15分完全攻略】4大SNS同時運用の全てを実演！<br />いいねAI全機能デモ
+                  【業界初】SNS運用がAIで自動化！
                 </span>
               </h3>
               <p className="hidden md:block text-base md:text-xl text-gray-500 font-bold max-w-3xl mx-auto leading-relaxed">
-                4大SNSの運用をわずか数分で完結させる具体的なデモ映像。AIの力を最大限に引き出す実演動画です。
+                SNS運用の未来を実演。最新のAI技術により、企画から投稿までを完全自動化する「いいねAI」の真価をご覧ください。
               </p>
             </div>
 
             <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white bg-gray-900">
               {playingIndex === 0 ? (
-                <iframe className="absolute inset-0 w-full h-full" src={`https://www.youtube.com/embed/U6a5_EtwGjI?autoplay=1&controls=1`} title="いいねAI全機能デモ" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                <iframe className="absolute inset-0 w-full h-full" src={`https://www.youtube.com/embed/otH3NQSWxVY?autoplay=1&controls=1`} title="【業界初】SNS運用がAIで自動化！" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               ) : (
                 <>
                   <div className="absolute inset-0 cursor-pointer" onClick={() => handlePlay(0)}>
-                    <img src="https://img.youtube.com/vi/U6a5_EtwGjI/maxresdefault.jpg" alt="いいねAI全機能デモ" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000" />
+                    <img src="https://img.youtube.com/vi/otH3NQSWxVY/maxresdefault.jpg" alt="【業界初】SNS運用がAIで自動化！" className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000" />
                     <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center z-10 cursor-pointer" onClick={() => handlePlay(0)}>
@@ -133,7 +134,8 @@ export const OfficialVideos: React.FC = () => {
             <div className="flex items-center gap-3 text-brand-600 font-black text-base md:text-xl border-t md:border-t-0 md:border-l border-gray-200 pt-4 md:pt-0 md:pl-8 relative z-10 w-full md:w-auto justify-center md:justify-start">
               <span>活用動画をチェック</span>
               <div className="p-2 bg-brand-50 rounded-full group-hover:translate-x-1 transition-transform">
-                <ExternalLink size={20} md:size={24} strokeWidth={3} />
+                {/* Fixed responsive icon size by removing invalid md:size prop and using Tailwind classes */}
+                <ExternalLink className="w-5 h-5 md:w-6 md:h-6" strokeWidth={3} />
               </div>
             </div>
           </a>
