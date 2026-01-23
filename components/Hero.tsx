@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
             </div>
 
             <p className="text-brand-600 text-lg font-bold leading-relaxed max-w-sm">
-              AIでSNS運用を簡単・効率化する新時代ツールをご紹介いたします。
+              AI de SNS運用を簡単・効率化する新時代ツールをご紹介いたします。
             </p>
 
             {/* horizontal badge (Longer) */}
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <div className="w-full h-full bg-white flex items-center justify-center overflow-hidden">
                     <img 
-                      src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/topphone.png" 
+                      src="https://cdn.jsdelivr.net/gh/39bit-onsen/CDNmy@main/assets/phone.png" 
                       alt="いいねAI アプリ画面デモ"
                       className="w-full h-full object-contain"
                     />
