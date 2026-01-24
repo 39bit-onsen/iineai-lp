@@ -42,7 +42,9 @@ export const ContactCTA: React.FC = () => {
             </h3>
             
             <a 
-              href="#download" 
+              href="https://drive.google.com/file/d/1VH3a1SqavlM09jeogzvpARYgP00eaX16/view?usp=drive_link" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full max-w-[200px] bg-[#10b981] hover:bg-[#059669] text-white font-black py-3 px-6 rounded-full shadow-md transition-all text-base md:text-lg flex items-center justify-center"
             >
               ダウンロードする

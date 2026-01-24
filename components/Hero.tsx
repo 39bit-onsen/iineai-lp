@@ -59,7 +59,9 @@ export const Hero: React.FC = () => {
 
             <div className="pt-4 no-print w-full max-w-lg flex justify-center">
               <a 
-                href="#demo" 
+                href="https://drive.google.com/file/d/1VH3a1SqavlM09jeogzvpARYgP00eaX16/view?usp=drive_link" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-brand-600 hover:bg-brand-700 text-white font-black py-5 px-14 rounded-full shadow-2xl transition-all inline-block text-2xl animate-subtle-pulse border-4 border-white"
               >
                  詳細資料ダウンロード
